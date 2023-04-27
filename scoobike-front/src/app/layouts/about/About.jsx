@@ -1,7 +1,12 @@
 import React from 'react'
+import { NavBar } from '../../components/NavBar/NavBar'
 
 export const About = () => {
   return (
-    <div>about</div>
+    <>
+    <NavBar />
+    <hr />
+    <div>Estás en la página About</div>
+    </>
   )
 }
