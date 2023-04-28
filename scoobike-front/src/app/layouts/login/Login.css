@@ -1,0 +1,21 @@
+.formulario {
+    padding: 4em;
+    height: 15em;
+    width: 30em;
+    background-color:rgb(202, 218, 239);
+    border-radius: 0.5em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:  0px 0px 10px 2px rgba(0,0,0,0.13);
+    place-items: center;
+}
+.botones{
+    place-items: center;
+}
+
+.zonaLogin{
+    display:flex;
+    justify-content: center;
+}
