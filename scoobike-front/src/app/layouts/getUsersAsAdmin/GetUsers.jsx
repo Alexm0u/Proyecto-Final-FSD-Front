@@ -61,7 +61,7 @@ export const GetAllUsers = () => {
                 (<div>A continuación se muestran los usuarios</div>)
             }
          </div>
-        
+         <Footer/>
          </>
     );
 }

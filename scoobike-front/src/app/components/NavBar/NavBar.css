@@ -1,12 +1,12 @@
 body {
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
 
 .navbarstyle{
     font-size:large;
     display: flex;
     justify-content: center;
-    background-color: rgb(202, 218, 239);
+    background-color:black;
     width: 100vw;
     background-position: center;
     background-size: 10em;

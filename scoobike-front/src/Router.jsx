@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import { About } from './app/layouts/About/about';
 import { Repairs } from './app/layouts/repairs/Repairs';
 import { Home } from './app/layouts/home/Home';
@@ -12,10 +10,6 @@ import { Profile } from './app/layouts/profile/profile';
 import { GetAllUsers } from './app/layouts/getUsersAsAdmin/GetUsers';
 import { UserDetails } from './app/layouts/getUsersAsAdmin/UserDetail/GetUsersDetail';
 import { Route, Routes } from 'react-router-dom';
-
-
-
-
 
 export const Router = () => {
   return (

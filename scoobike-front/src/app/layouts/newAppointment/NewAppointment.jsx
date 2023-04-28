@@ -120,6 +120,7 @@ export const NewAppointment = () => {
           </div>
         </Form>
       </div>
-    </>
+      <Footer/>
+      </>
   );
 };

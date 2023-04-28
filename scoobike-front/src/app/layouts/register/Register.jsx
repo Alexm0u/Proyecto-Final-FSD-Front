@@ -178,6 +178,7 @@ console.log(credenciales, "sdfadfddsf")
                     </Row>
                 
             </div>
-        </>
+            <Footer/>
+            </>
     );
 }

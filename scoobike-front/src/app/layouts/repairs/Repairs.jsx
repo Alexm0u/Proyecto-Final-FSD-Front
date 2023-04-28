@@ -10,6 +10,7 @@ export const Repairs = () => {
     <div></div>
 
 
+    <Footer/>
     </>
   )
 }

@@ -54,6 +54,7 @@ export const Profile = () => {
               </ListGroup>
           </Card>
        </div>
+       <Footer/>
        </>
    )
 }

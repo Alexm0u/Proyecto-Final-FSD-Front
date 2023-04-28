@@ -10,6 +10,7 @@ export const Home = () => {
     <div>Estás en la página Home</div>
 
 
+    <Footer/>
     </>
   )
 }
