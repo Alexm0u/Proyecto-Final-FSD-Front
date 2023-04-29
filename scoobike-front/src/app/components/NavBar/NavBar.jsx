@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userData, userout } from '../../layouts/userSlice';
 import { useEffect } from 'react';
 import { addChoosen } from '../../layouts/detailSlice';
+import  imglogo   from '../../../img/logo-scoobike.jpeg'
 
 function NavBar() {
 
@@ -28,36 +29,36 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <img src="" alt="" />
-            <Nav.Link as={Link} to="/">Inicio</Nav.Link>
+            <img className='logo-scoobike' style={{width:"20rem" }} src={imglogo} alt="Logo scoobike" />
+            <Nav.Link className='navbarButton' as={Link} to="/">Inicio</Nav.Link>
             {credencialesRedux?.credentials?.usuario?.roleId === 3 ? (
               <>
-                <Nav.Link as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
-                <Nav.Link as={Link} to='/user/all'>Todos los usuarios</Nav.Link>
-                <Nav.Link as={Link} to='/user/profile'>Perfil</Nav.Link>
+                <Nav.Link className='navbarButton' as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
+                <Nav.Link className='navbarButton' as={Link} to='/user/all'>Todos los usuarios</Nav.Link>
+                <Nav.Link className='navbarButton' as={Link} to='/user/profile'>Perfil</Nav.Link>
               </>
               ) : credencialesRedux?.credentials?.usuario?.roleId === 2 ? (
                   <>
-                  <Nav.Link as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
-                  <Nav.Link as={Link} to='/newappointment'>Nueva cita</Nav.Link>
-                  <Nav.Link as={Link} to='/user/all'>Todos los usuarios</Nav.Link>
-                  <Nav.Link as={Link} to='/user/profile'>Perfil</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/newappointment'>Nueva cita</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/user/all'>Todos los usuarios</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/user/profile'>Perfil</Nav.Link>
                 </>
                 ) : credencialesRedux?.credentials?.usuario?.roleId === 1 ? (
                   <>
-                  <Nav.Link as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
-                  <Nav.Link as={Link} to='/newappointment'>Nueva cita</Nav.Link>
-                  <Nav.Link as={Link} to='/appointment/myappointment'>Mis citas</Nav.Link>
-                  <Nav.Link as={Link} to='/user/profile'>Perfil</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/newappointment'>Nueva cita</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/appointment/myappointment'>Mis citas</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/user/profile'>Perfil</Nav.Link>
                   {/* <Nav.Link as={Link} to='/appointment/myappoinment'>My Appoinment</Nav.Link> */}
                   </>
                   ) : (
                   <>
-                <Nav.Link as={Link} to='/login'>Login</Nav.Link>
-                <Nav.Link as={Link} to='/register'>Registro</Nav.Link>
+                <Nav.Link className='navbarButton' as={Link} to='/login'>Login</Nav.Link>
+                <Nav.Link className='navbarButton' as={Link} to='/register'>Registro</Nav.Link>
               </>
                 )}
-            <Nav.Link as={Link} to="/about">Sobre nosotros</Nav.Link>
+            <Nav.Link className='navbarButton' as={Link} to="/about">Sobre nosotros</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
