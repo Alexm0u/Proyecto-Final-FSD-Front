@@ -46,7 +46,7 @@ export const Profile = () => {
       <NavBar />
       <hr />
        <div className='divCard'>
-          <Card style={{ width: '20rem' }}>
+          <Card className='profileCard' style={{ width: '20rem' }}>
               <ListGroup variant="flush">
                   <ListGroup.Item>Nombre: {users.name}</ListGroup.Item>
                   <ListGroup.Item>Email: {users.email}</ListGroup.Item>
