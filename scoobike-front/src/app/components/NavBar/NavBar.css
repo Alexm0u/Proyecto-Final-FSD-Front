@@ -1,9 +1,12 @@
 .navbarstyle{
     font-size:large;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     background-color:black;
     width: 100vw;
     background-position: center;
     background-size: 10em;
+    position:fixed;
+    top: 0%;
+
 }

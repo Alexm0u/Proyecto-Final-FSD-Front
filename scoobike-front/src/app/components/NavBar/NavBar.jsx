@@ -23,7 +23,7 @@ function NavBar() {
   };
   return (
     <div className='navbarstyle'>
-    <Navbar bg="light" expand="lg">
+    <Navbar className="NavBar" collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
