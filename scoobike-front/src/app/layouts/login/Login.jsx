@@ -10,9 +10,8 @@ import { decodeToken } from 'react-jwt'
 import { login } from '../userSlice';
 import { useDispatch } from 'react-redux'
 import './Login.css';
-import NavBar from '../../components/NavBar/NavBar';
 import { InputText } from '../../components/InputText/InputText';
-import { Footer } from '../../components/footer/Footer';
+
 
 
 
@@ -110,8 +109,7 @@ export function Login() {
 
     return (
         <>
-            <NavBar />
-            <hr />
+
             <div className='zonaLogin'><div >
                 <div className='formulario'>
                     <Form>
@@ -158,7 +156,6 @@ export function Login() {
                 </div>
             </div>
             </div>
-            <Footer/>
             </>
     );
 }

@@ -7,8 +7,7 @@ import { userData } from '../userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Card, ListGroup } from 'react-bootstrap';
 import { detailData } from '../detailSlice';
-import NavBar from '../../components/NavBar/NavBar';
-import { Footer } from '../../components/footer/Footer';
+
 
 
 export const Profile = () => {
@@ -43,8 +42,7 @@ export const Profile = () => {
   console.log(users);
    return (
       <>
-      <NavBar />
-      <hr />
+
        <div className='divCard'>
           <Card className='profileCard' style={{ width: '20rem' }}>
               <ListGroup variant="flush">
@@ -55,7 +53,6 @@ export const Profile = () => {
               </ListGroup>
           </Card>
        </div>
-       <Footer/>
        </>
    )
 }

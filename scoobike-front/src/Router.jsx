@@ -10,11 +10,14 @@ import { Profile } from './app/layouts/profile/profile';
 import { GetAllUsers } from './app/layouts/getUsersAsAdmin/GetUsers';
 import { UserDetails } from './app/layouts/getUsersAsAdmin/UserDetail/GetUsersDetail';
 import { Route, Routes } from 'react-router-dom';
+import NavBar from './app/components/NavBar/NavBar';
+import { Footer } from './app/components/footer/Footer';
 
 export const Router = () => {
   return (
     <>
-    
+    <NavBar/>
+    <hr/>
     <Routes>
         <Route path='/' element={<Home/>} />;
         <Route path='/login' element={<Login/>} />;
@@ -27,6 +30,7 @@ export const Router = () => {
         <Route path='/user/all' element={<GetAllUsers />} />
         <Route path='/user/all/details' element={<UserDetails />} />
     </Routes>
+    <Footer/>
     </>
   )
 }

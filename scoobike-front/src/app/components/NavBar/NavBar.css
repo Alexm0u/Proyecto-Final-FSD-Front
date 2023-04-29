@@ -6,7 +6,6 @@
     width: 100vw;
     background-position: center;
     background-size: 10em;
-    position:fixed;
     top: 0%;
-
+    position:sticky;
 }

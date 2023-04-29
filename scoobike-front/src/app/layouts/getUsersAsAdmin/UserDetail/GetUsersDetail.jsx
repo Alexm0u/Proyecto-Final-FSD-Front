@@ -2,7 +2,7 @@
 import React, {useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import { detailData } from '../../detailSlice';
-import NavBar from '../../../components/NavBar/NavBar';
+
 
 export const UserDetails = () => {
 
@@ -16,8 +16,7 @@ export const UserDetails = () => {
 
      return (
         <>
-        <NavBar />
-        <hr />
+
          <div className=''>
             <div className='texto'>Nombre Usuario: </div>
             {detailRedux?.choosenObject?.name}

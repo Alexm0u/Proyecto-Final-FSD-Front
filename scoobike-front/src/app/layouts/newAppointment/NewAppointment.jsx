@@ -10,8 +10,7 @@ import { appointmentData } from "../appointmentSlice";
 import "./newAppointment.css";
 import { InputText } from "../../components/InputText/InputText";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../components/NavBar/NavBar";
-import { Footer } from "../../components/footer/Footer";
+
 
 export const NewAppointment = () => {
   const navigate = useNavigate();
@@ -76,8 +75,7 @@ export const NewAppointment = () => {
 
   return (
     <>
-      <NavBar />
-      <hr />
+
       <div style={{ display: "block", width: 700, padding: 30 }}>
         <h4>Nueva cita</h4>
         <Form>
@@ -121,7 +119,7 @@ export const NewAppointment = () => {
           </div>
         </Form>
       </div>
-      <Footer/>
+
       </>
   );
 };

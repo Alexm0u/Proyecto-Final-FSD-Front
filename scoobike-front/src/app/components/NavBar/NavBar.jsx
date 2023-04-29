@@ -25,10 +25,10 @@ function NavBar() {
     <div className='navbarstyle'>
     <Navbar className="NavBar" collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <img src="" alt="" srcset="" />
+            <img src="" alt="" />
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             {credencialesRedux?.credentials?.usuario?.roleId === 3 ? (
               <>

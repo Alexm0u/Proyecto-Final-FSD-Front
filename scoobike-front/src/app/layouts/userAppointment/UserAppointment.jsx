@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getAppointmentAsUser } from '../services/apiCalls';
 import { userData } from "../userSlice";
 import { Card, ListGroup } from 'react-bootstrap';
-import NavBar from '../../components/NavBar/NavBar';
-import { Footer } from '../../components/footer/Footer';
+
 
 export const CatchAppointmentAsUser = () => {
 
@@ -28,8 +27,7 @@ export const CatchAppointmentAsUser = () => {
   console.log(appointments)
   return (
     <>
-      <NavBar />
-      <hr />
+
       <Container className="appoinment">
         <Row>
           <Col>
@@ -68,7 +66,6 @@ export const CatchAppointmentAsUser = () => {
         </Row>
       </Container>
 
-      <Footer/>
       </>
   );
 }

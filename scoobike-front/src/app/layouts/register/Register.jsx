@@ -8,8 +8,7 @@ import "./Register.css";
 import { newUser } from "../services/apiCalls";
 import { useNavigate } from "react-router-dom";
 import { InputText } from "../../components/InputText/InputText";
-import NavBar from "../../components/NavBar/NavBar";
-import { Footer } from "../../components/footer/Footer";
+
 
 export function Register() {
     const navigate = useNavigate();
@@ -96,8 +95,7 @@ console.log(credenciales, "sdfadfddsf")
 
     return (
         <>
-            <NavBar />
-            <hr />
+
             <div className="container">
                 <h4>Nuevo usuario:</h4>
                     <Row className="registerForm">
@@ -179,7 +177,6 @@ console.log(credenciales, "sdfadfddsf")
                     </Row>
                 
             </div>
-            <Footer/>
             </>
     );
 }

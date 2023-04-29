@@ -1,13 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
-
 import { addChoosen } from '../detailSlice';
 import { getTodosUsers } from '../services/apiCalls';
 import { userData } from '../userSlice';
-import NavBar from '../../components/NavBar/NavBar';
-import { Footer } from '../../components/footer/Footer';
+
 
 export const GetAllUsers = () => {
     
@@ -39,8 +36,6 @@ export const GetAllUsers = () => {
 
     return (
         <>
-        <NavBar />
-        <hr />
         <div className='usersDesign'>
             {  users.length > 0 ? 
                 (<div>
@@ -62,7 +57,6 @@ export const GetAllUsers = () => {
                 (<div>A continuación se muestran los usuarios</div>)
             }
          </div>
-         <Footer/>
          </>
     );
 }
