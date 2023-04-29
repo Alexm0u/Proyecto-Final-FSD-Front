@@ -11,6 +11,7 @@ import "./newAppointment.css";
 import { InputText } from "../../components/InputText/InputText";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
+import { Footer } from "../../components/footer/Footer";
 
 export const NewAppointment = () => {
   const navigate = useNavigate();

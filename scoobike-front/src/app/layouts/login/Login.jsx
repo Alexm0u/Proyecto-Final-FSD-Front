@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux'
 import './Login.css';
 import NavBar from '../../components/NavBar/NavBar';
 import { InputText } from '../../components/InputText/InputText';
+import { Footer } from '../../components/footer/Footer';
 
 
 

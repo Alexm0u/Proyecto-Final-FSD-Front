@@ -9,6 +9,7 @@ import { newUser } from "../services/apiCalls";
 import { useNavigate } from "react-router-dom";
 import { InputText } from "../../components/InputText/InputText";
 import NavBar from "../../components/NavBar/NavBar";
+import { Footer } from "../../components/footer/Footer";
 
 export function Register() {
     const navigate = useNavigate();

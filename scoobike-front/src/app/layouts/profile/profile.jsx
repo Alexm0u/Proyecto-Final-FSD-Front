@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Card, ListGroup } from 'react-bootstrap';
 import { detailData } from '../detailSlice';
 import NavBar from '../../components/NavBar/NavBar';
+import { Footer } from '../../components/footer/Footer';
 
 
 export const Profile = () => {

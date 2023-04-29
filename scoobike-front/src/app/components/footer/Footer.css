@@ -1,6 +1,11 @@
 .Foot{
-    background-color: rgb(202, 218, 239);
+    display: flex;
+    background-color: black;
     color: whitesmoke;
+    position: static;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .W1{
     display: flex;

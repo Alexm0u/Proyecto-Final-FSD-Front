@@ -28,6 +28,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            <img src="" alt="" srcset="" />
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             {credencialesRedux?.credentials?.usuario?.roleId === 3 ? (
               <>

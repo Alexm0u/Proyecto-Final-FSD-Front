@@ -7,6 +7,7 @@ import { addChoosen } from '../detailSlice';
 import { getTodosUsers } from '../services/apiCalls';
 import { userData } from '../userSlice';
 import NavBar from '../../components/NavBar/NavBar';
+import { Footer } from '../../components/footer/Footer';
 
 export const GetAllUsers = () => {
     
