@@ -29,7 +29,9 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <img className='logo-scoobike' style={{width:"20rem" }} src={imglogo} alt="Logo scoobike" />
+            <Link to='/' className='navbar-logo'>
+              <img className='logo-scoobike' style={{width:"20rem" }} src={imglogo} alt="Logo scoobike" />
+            </Link>
             <Nav.Link className='navbarButton' as={Link} to="/">Inicio</Nav.Link>
             {credencialesRedux?.credentials?.usuario?.roleId === 3 ? (
               <>
