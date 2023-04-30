@@ -1,6 +1,6 @@
 .Foot{
     display: flex;
-    background-color: black;
+    background-color: rgb(37, 36, 36);
     color: whitesmoke;
     position: static;
     left: 0;
