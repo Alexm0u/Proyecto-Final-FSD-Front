@@ -149,7 +149,7 @@ export function Login() {
                         <br />
                         <div className='botones'>
                             <Button variant="primary" className='botonLogin' style={{ width: "5em", height: "1.9em", }} onClick={() => logeame()}>
-                                Log Me
+                                Acceder
                             </Button>
                         </div>
                     </Form>

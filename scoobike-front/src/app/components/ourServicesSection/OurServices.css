@@ -1,6 +1,6 @@
 .serv-img{
     display:grid;
-    width: 50%;
+    width: 33%;
 }
 .service-container {
     height: 100%;
@@ -12,3 +12,10 @@
     object-fit: contain;
     color: whitesmoke;
 }
+/* .servicios.img{
+    display:grid;
+    gap:1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill), minmax(15rem, 1fr);
+
+} */
