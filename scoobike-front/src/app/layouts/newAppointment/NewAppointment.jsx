@@ -20,21 +20,21 @@ export const NewAppointment = () => {
   const [services, setServices] = useState([
     {
       id: 1,
-      servicename: "Cleaning"
+      servicename: "Reparación Bici/Patinete"
     },
     {
       id: 2,
-      servicename: "Broken Teeth"
+      servicename: "Revisión completa Bici/Patinete"
     }
   ]);
   const [mechanics, setMechanics] = useState([
     {
       id: 1,
-      specialtyname: "Orthodontics"
+      specialtyname: "Bici: Miguel Herranz"
     },
     {
       id: 2,
-      specialtyname: "Oral Surgery"
+      specialtyname: "Patinete: Jose Miguel Camps"
     }
   ]);
 
