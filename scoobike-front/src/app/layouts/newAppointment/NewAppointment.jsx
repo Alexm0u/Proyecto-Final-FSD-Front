@@ -75,11 +75,11 @@ export const NewAppointment = () => {
 
   return (
     <>
-
-      <div style={{ display: "block", width: 700, padding: 30 }}>
+    <div className="container">
+    <div className="appointment-form" style={{ display: "block", width: 700, padding: 30 }}>
         <h4>Nueva cita</h4>
         <Form>
-          <Form.Select name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
+          <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
             <option>Escoge servicio:</option>
             {/* <option value="1">Extraccion</option>
             <option value="2">Blanqueamiento</option> */}
@@ -90,7 +90,7 @@ export const NewAppointment = () => {
               )
             })}
           </Form.Select>
-          <Form.Select name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
+          <Form.Select className="dropdown" name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
             <option>Escoge mecánico y especialidad:</option>
 
             {mechanics.map((mechanic) => {
@@ -100,7 +100,7 @@ export const NewAppointment = () => {
             })}
           </Form.Select>
           <Form.Group>
-            <Form.Label>Fecha y hora:</Form.Label>
+            <Form.Label className="date-hour">Fecha y hora:</Form.Label>
             <InputText
               className={"date"}
               type={"datetime-local"}
@@ -119,6 +119,8 @@ export const NewAppointment = () => {
           </div>
         </Form>
       </div>
+    </div>
+      
 
       </>
   );
