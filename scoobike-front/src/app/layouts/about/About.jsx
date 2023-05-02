@@ -2,6 +2,7 @@ import React from 'react'
 import './About.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
 
@@ -12,60 +13,43 @@ export const About = () => {
         <span className='stroke-text'>TRAER TU PATINETE O BICI A NUESTRO TALLER</span>
       </div>
       <div className="cards-services">
-      <Card className='card'>
-      <Card.Header>Featured</Card.Header>
+      <Card className='card' style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>Card Title</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+      </ListGroup>
+      <Card.Body>
+      <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
 
-    <Card className='card'>
-      <Card.Header className='card-header'>Featured</Card.Header>
+    <Card className='card' style={{ width: '18rem' }}>
+      
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>Card Title</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+      </ListGroup>
+      <Card.Body>
+      <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
 
-    <Card className='card'>
-      <Card.Header className='card-header'>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-    <Card className='card'>
-      <Card.Header className='card-header'>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-    <Card className='card'>
-      <Card.Header className='card-header'>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
       </div>
     </div>
   )

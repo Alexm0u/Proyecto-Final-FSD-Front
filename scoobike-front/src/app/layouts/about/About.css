@@ -2,13 +2,14 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 0 2rem;
-    display: flex;
+    display: grid;
     gap: 4rem;
-    /* flex-direction: column;
-    position: relative; */
+    flex-direction: column;
+    /* position: relative; */
 }
 .cards-services{
     display:flex;
+    flex-wrap:wrap;
     align-items: center;
     justify-content: center;
     gap: 3rem;
