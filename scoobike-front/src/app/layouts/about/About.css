@@ -1,0 +1,24 @@
+.repairs-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4rem;
+    /* flex-direction: column;
+    position: relative; */
+}
+.cards-services{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.card-header{
+    background-color: whitesmoke;
+    color: rgb(37, 36, 36);
+}
+.card{
+    background-color: darkgrey;
+    color: rgb(37, 36, 36);
+}
