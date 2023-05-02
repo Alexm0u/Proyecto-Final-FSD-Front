@@ -1,6 +1,25 @@
+.OurServices {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+.header-serv {
+    display: flex;
+    gap: 5rem;
+    font-weight: bold;
+    justify-content: center;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-style: italic;
+    background-color: rgb(37, 36, 36);
+}
+
+
 .serv-img{
     display:grid;
     width: 33%;
+    margin-bottom: 0.2rem;
 }
 .service-container {
     height: 100%;
@@ -11,9 +30,11 @@
     background-color:rgb(37, 36, 36);
     object-fit: contain;
     color: whitesmoke;
+    margin-bottom: 0.2rem;
 }
 .servicios-img{
     display:flex;
     height: 15%;
+    gap: 0.1rem;
    
 }

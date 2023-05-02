@@ -17,7 +17,7 @@ export const Home = () => {
 
       <hr/>
       
-      <OurServices/>
+    <OurServices/>
       
 </>
   )

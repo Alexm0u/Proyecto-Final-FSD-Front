@@ -7,17 +7,31 @@ import './ourServices.css'
 
 const OurServices = () => {
   return (
-    <div className="service-container">
+    <div className="ourServices" id='services'>
+      <div className="service-container">
 
-    <h1>Nuestros Servicios:</h1>
-    <div className="servicios-img">
-      <img className='serv-img' src={imgServ1} alt="imagen serv 1"/>
-      <img className='serv-img' src={imgServ2} alt="imagen serv 2"/>
-      <img className='serv-img' src={imgServ3} alt="imagen serv 3"/>
-    </div>
-    
+        <h1 className='header-serv'>Consulta sobre nuestros servicios de mantenimiento y reparación</h1>
+        <div className="servicios-img">
+          <img className='serv-img' src={imgServ1} alt="imagen serv 1" />
+          <img className='serv-img' src={imgServ2} alt="imagen serv 2" />
+          <img className='serv-img' src={imgServ3} alt="imagen serv 3" />
+        </div>
+
+
+      </div>
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
   )
 }
 
