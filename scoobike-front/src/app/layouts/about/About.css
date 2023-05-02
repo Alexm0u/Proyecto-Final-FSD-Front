@@ -2,19 +2,19 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 0 2rem;
-    display: grid;
-    gap: 4rem;
+    display: flex;
+    gap: 1rem;
     flex-direction: column;
     position: relative;
     z-index:-1;
 }
-.cards-services{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-    justify-content: center;
+.gallery{
+    display:grid;
+    overflow: hidden;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill), minmax(min(100%, 25rem), 1fr);
     gap: 3rem;
-    z-index: -1;
 }
 
 .card-header{
@@ -24,4 +24,5 @@
 .card{
     background-color: darkgrey;
     color: rgb(37, 36, 36);
+    margin-bottom:0.5rem ;
 }
