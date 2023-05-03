@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 
@@ -108,9 +108,8 @@ export function Login() {
 
 
     return (
-        <>
-
-            <div className='zonaLogin'><div >
+    <div className='zonaLogin'><div >
+                <Col>
                 <div className='formulario'>
                     <Form>
                         <Form.Group>
@@ -154,8 +153,9 @@ export function Login() {
                         </div>
                     </Form>
                 </div>
+                </Col>
             </div>
             </div>
-            </>
+
     );
 }

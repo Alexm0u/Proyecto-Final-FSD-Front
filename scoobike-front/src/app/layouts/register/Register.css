@@ -1,7 +1,7 @@
 .registerForm {
-    padding: 4em;
-    height: 20em;
-    width: 35em;
+    padding: 4rem;
+    height: 20rem;
+    width: 20rem;
     background-color: darkgrey;
     border-radius: 0.5em;
     display:flex;
@@ -10,8 +10,10 @@
     flex-direction: column;
     box-shadow:  0px 0px 10px 2px rgba(0,0,0,0.13);
     place-items: center;
+    margin-bottom: 2rem;
 }
 .container{
-    display: center;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
 }

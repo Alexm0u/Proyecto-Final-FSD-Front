@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Await } from 'react-router-dom';
 
 const root = "http://localhost:3000";
 
@@ -40,8 +41,13 @@ export const getAppointmentAsUser = async (token) => {
   let config = {        headers: { Authorization: `Bearer `+token }    };
   return await axios.get(`${root}/appointmentuser`, config,)
 }
-
-
+export const updateAppointment = async (id, body, token) => {
+  let config = {        headers: { Authorization: `Bearer `+token }    };
+  console.log (id)
+  console.log (body)
+  console.log (token)
+  return await axios.put(`${root}/appointment/update/${id}`,body, config,)
+}
 
   export const updateUser = async (body) => {
     return await axios.put(`${root}updateprofile`, body);

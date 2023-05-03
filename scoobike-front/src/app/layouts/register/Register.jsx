@@ -105,14 +105,14 @@ export function Register() {
                                     </Form.Label>
                                     <InputText
                                         className={
-                                            credencialesError.fullNameError ===
+                                            credencialesError.nameError ===
                                             ""
                                                 ? "inputBasicDesign"
                                                 : "inputBasicDesign inputErrorDesign"
                                         }
                                         type={"text"}
                                         name={"name"}
-                                        placeholder={"Name and surname..."}
+                                        placeholder={"Nombre completo..."}
                                         required={true}
                                         changeFunction={(e) => inputHandler(e)}
                                         blurFunction={(e) => checkError(e)}

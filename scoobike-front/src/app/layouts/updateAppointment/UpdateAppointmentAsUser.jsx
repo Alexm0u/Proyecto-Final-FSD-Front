@@ -3,18 +3,19 @@ import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { decodeToken } from "react-jwt";
 import { useDispatch, useSelector, } from "react-redux";
-import { getUserData, nuevoAppointment } from "../services/apiCalls";
+import { updateAppointment } from "../services/apiCalls";
 import { userData } from "../userSlice";
 import { appointmentData } from "../appointmentSlice";
-import "./newAppointment.css";
+// import "./newAppointment.css";
 import { InputText } from "../../components/InputText/InputText";
 import { useNavigate } from "react-router-dom";
 
 
-export const NewAppointment = () => {
+export const UpdateAppointmentAsUser = () => {
   const navigate = useNavigate();
   const ReduxCredentials = useSelector(userData);
   const detallesAppointment = useSelector(appointmentData);
+  const params = detallesAppointment.choosenAppointment.id
 
   const [services, setServices] = useState([
     {
@@ -56,26 +57,26 @@ export const NewAppointment = () => {
   const checkError = (e) => { };
   //
 
-  const registerappointment = () => {
-    nuevoAppointment(appointments, ReduxCredentials.credentials.token)
+  const actualizarAppointment = () => {
+    updateAppointment(params, appointments, ReduxCredentials.credentials.token)
       .then((resultado) => {
         setAppointments(resultado.data);
         console.log(resultado);
 
-        setTimeout(() => {
-          navigate("/user/profile");
-        }, 1000);
+        // setTimeout(() => {
+        //   navigate("/user/profile");
+        // }, 1000);
       })
       .catch((error) => {
         console.error(error.message);
       });
   };
-
+console.log (appointments)
   return (
 
     <div className="container">
     <div className="appointment-form" style={{ display: "block", width: 700, padding: 30 }}>
-        <h4>Nueva cita</h4>
+        <h4>Modificar cita</h4>
         <Form>
           <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
             <option>Escoge servicio:</option>
@@ -111,8 +112,8 @@ export const NewAppointment = () => {
           </Form.Group>
           <br />
           <div className="botonModificar">
-            <Button variant="primary" onClick={registerappointment}>
-              Crear cita
+            <Button variant="primary" onClick={actualizarAppointment}>
+              Modificar cita
             </Button>
           </div>
         </Form>

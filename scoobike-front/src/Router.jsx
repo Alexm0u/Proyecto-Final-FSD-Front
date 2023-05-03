@@ -12,6 +12,7 @@ import { UserDetails } from './app/layouts/getUsersAsAdmin/UserDetail/GetUsersDe
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './app/components/NavBar/NavBar';
 import { Footer } from './app/components/footer/Footer';
+import { UpdateAppointmentAsUser } from './app/layouts/updateAppointment/UpdateAppointmentAsUser';
 
 export const Router = () => {
   return (
@@ -29,6 +30,7 @@ export const Router = () => {
         <Route path='/appointment/myappointment' element={<CatchAppointmentAsUser/>}/>;
         <Route path='/user/all' element={<GetAllUsers />} />
         <Route path='/user/all/details' element={<UserDetails />} />
+        <Route path='/updateappointment' element= {<UpdateAppointmentAsUser/>} />
     </Routes>
     <Footer/>
     </>

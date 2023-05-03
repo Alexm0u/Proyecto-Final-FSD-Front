@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getAppointmentAsUser } from '../services/apiCalls';
 import { userData } from "../userSlice";
-import { Card, ListGroup } from 'react-bootstrap';
+import { Card, ListGroup, } from 'react-bootstrap';
+import { addAppointment } from '../appointmentSlice';
 
 
 export const CatchAppointmentAsUser = () => {
@@ -12,6 +13,11 @@ export const CatchAppointmentAsUser = () => {
   const ReduxCredentials = useSelector(userData);
 
   const [appointments, setAppointments] = useState([]);
+
+  const dispatch = useDispatch()
+
+  const AppUpdater = (AppToUpdate) => {console.log (AppToUpdate) 
+  dispatch(addAppointment({choosenAppointment:AppToUpdate}))}
 
   useEffect(() => {
     if (appointments.length === 0) {
@@ -38,20 +44,17 @@ export const CatchAppointmentAsUser = () => {
                     appointments.map(
                       appointment => {
                         return (
-                          <div key={appointment.id}>
+                          <div key={appointment.id} onClick={AppUpdater(appointment)}>
                             <Card style={{ width: '20rem' }}>
                               <ListGroup variant="flush">
                                 <ListGroup.Item>Servicio: {appointment.Service.servicename}</ListGroup.Item>
                                 <ListGroup.Item>Duración: {appointment.Service.duration} min</ListGroup.Item>
                                 <ListGroup.Item>Precio: {appointment.Service.price} €</ListGroup.Item>
                                 <ListGroup.Item>Fecha: {appointment.date}</ListGroup.Item></ListGroup>
+                                <Button variant="primary" href='/updateappointment'>
+              Modificar cita
+            </Button>
                             </Card>
-                            {/* <ol>
-                                                    <li>{appointment.Service.servicename}</li>
-                                                    <li>{appointment.Service.duration}</li>
-                                                    <li>{appointment.Service.price}</li>
-                                                    <li>{appointment.date}</li>
-                                                  </ol> */}
                           </div>
                         )
                       }
@@ -59,8 +62,9 @@ export const CatchAppointmentAsUser = () => {
                   }
                 </div>)
                 :
-                (<div>Espere por favor...</div>)
+                (<div>Si tiene citas aparacerán a continuación...</div>)
               }
+  
             </div>
           </Col>
         </Row>

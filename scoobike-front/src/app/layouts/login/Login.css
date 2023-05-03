@@ -1,7 +1,6 @@
 .formulario {
     padding: 4em;
     height: 15em;
-    width: 30em;
     background-color: darkgrey;
     border-radius: 0.5em;
     display:flex;
@@ -18,4 +17,5 @@
 .zonaLogin{
     display:flex;
     justify-content: center;
+    margin-bottom: 2rem;
 }

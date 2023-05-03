@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './Footer.css'
+import { Whatsapp, Instagram, Facebook, Twitter, Youtube, Linkedin, Wechat } from 'react-bootstrap-icons';
 
 
 
@@ -27,15 +28,16 @@ export const Footer = () => {
             <p> 9:00am to 20:30pm </p>
         </Col>
     <Row>
-            <Col className='W1 mt-3 mb-1'><h3><i className="bi bi-whatsapp"></i></h3></Col>
-            <Col className='W2 mt-3 mb-1'><h3><i className="bi bi-facebook"></i></h3></Col>
-            <Col className='W3 mt-3 mb-1'><h3><i className="bi bi-instagram"></i></h3></Col>
+            <Col className='W1 mt-3 mb-1'><h3><Whatsapp/><i className="bi bi-whatsapp"></i></h3></Col>
+            <Col className='W2 mt-3 mb-1'><h3><Facebook/><i className="bi bi-facebook"></i></h3></Col>
+            <Col className='W3 mt-3 mb-1'><h3><Instagram/><i className="bi bi-instagram"></i></h3></Col>
     </Row>
     <Row>
         <Col className='Copy mt-2'>
             <p>&copy;{new Date().getFullYear()} Created by Alexm0u - All Rights Reserved </p>
             </Col>
     </Row>
+    <Row></Row>
 </Row>
     </Container>
 </div>

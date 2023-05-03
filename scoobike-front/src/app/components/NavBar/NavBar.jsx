@@ -52,7 +52,7 @@ function NavBar() {
                   <Nav.Link className='navbarButton' as={Link} to='/newappointment'>Nueva cita</Nav.Link>
                   <Nav.Link className='navbarButton' as={Link} to='/appointment/myappointment'>Mis citas</Nav.Link>
                   <Nav.Link className='navbarButton' as={Link} to='/user/profile'>Perfil</Nav.Link>
-                  {/* <Nav.Link as={Link} to='/appointment/myappoinment'>My Appoinment</Nav.Link> */}
+                  
                   </>
                   ) : (
                   <>

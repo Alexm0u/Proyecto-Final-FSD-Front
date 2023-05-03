@@ -6,17 +6,7 @@
     gap: 1rem;
     flex-direction: column;
     position: relative;
-    z-index:-1;
 }
-.gallery{
-    display:grid;
-    overflow: hidden;
-    gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill), minmax(min(100%, 25rem), 1fr);
-    gap: 3rem;
-}
-
 .card-header{
     background-color: whitesmoke;
     color: rgb(37, 36, 36);
