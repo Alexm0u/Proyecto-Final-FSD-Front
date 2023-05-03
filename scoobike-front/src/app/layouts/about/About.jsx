@@ -24,7 +24,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary" href='/login'>Solicitar cita</Button>
+              <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
           <Card className='card'>
@@ -38,7 +38,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary">Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
 
@@ -52,7 +52,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary">Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
 
@@ -66,7 +66,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary">Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
 
@@ -82,7 +82,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary" as={Link} to='/login'>Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
           <Card className='card'>
@@ -94,7 +94,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary">Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
 
@@ -108,7 +108,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              <Button variant="primary">Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
 
@@ -121,7 +121,7 @@ export const About = () => {
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              a<Button variant="primary">Solicitar cita</Button>
+            <Button className='boton-cita' variant="primary" href='/login'>Solicitar cita</Button>
             </Card.Body>
           </Card>
 
