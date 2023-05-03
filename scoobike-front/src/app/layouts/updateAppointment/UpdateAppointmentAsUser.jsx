@@ -39,6 +39,7 @@ export const UpdateAppointmentAsUser = () => {
   ]);
 
   const [appointments, setAppointments] = useState({
+    id: params,
     service_id: "",
     mechanic_id: "",
     user_id: ReduxCredentials.credentials.usuario.userId,
@@ -63,9 +64,9 @@ export const UpdateAppointmentAsUser = () => {
         setAppointments(resultado.data);
         console.log(resultado);
 
-        // setTimeout(() => {
-        //   navigate("/user/profile");
-        // }, 1000);
+        setTimeout(() => {
+          navigate("/user/profile");
+        }, 1000);
       })
       .catch((error) => {
         console.error(error.message);

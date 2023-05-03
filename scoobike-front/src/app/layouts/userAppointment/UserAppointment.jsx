@@ -16,9 +16,9 @@ export const CatchAppointmentAsUser = () => {
 
   const dispatch = useDispatch()
 
-  const AppUpdater = (AppToUpdate) => {console.log (AppToUpdate) 
-  dispatch(addAppointment({choosenAppointment:AppToUpdate}))}
-
+  const AppUpdater = (AppToUpdate) => { 
+  dispatch(addAppointment({choosenAppointment:AppToUpdate}))
+  console.log (AppToUpdate)}
   useEffect(() => {
     if (appointments.length === 0) {
       getAppointmentAsUser(ReduxCredentials.credentials?.token)
@@ -44,16 +44,14 @@ export const CatchAppointmentAsUser = () => {
                     appointments.map(
                       appointment => {
                         return (
-                          <div key={appointment.id} onClick={AppUpdater(appointment)}>
+                          <div key={appointment.id} onClick={() => AppUpdater(appointment)} >
                             <Card style={{ width: '20rem' }}>
                               <ListGroup variant="flush">
                                 <ListGroup.Item>Servicio: {appointment.Service.servicename}</ListGroup.Item>
                                 <ListGroup.Item>Duración: {appointment.Service.duration} min</ListGroup.Item>
                                 <ListGroup.Item>Precio: {appointment.Service.price} €</ListGroup.Item>
                                 <ListGroup.Item>Fecha: {appointment.date}</ListGroup.Item></ListGroup>
-                                <Button variant="primary" href='/updateappointment'>
-              Modificar cita
-            </Button>
+                                <Button variant="primary" href='/updateappointment' >Modificar cita</Button>
                             </Card>
                           </div>
                         )
