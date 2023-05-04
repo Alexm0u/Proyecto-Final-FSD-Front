@@ -69,7 +69,7 @@ export const changeRole = async (body, token) => {
     role_id: role_id,
           //       where: {
           // id: userId
-          // }
+          // }.
     };
     
   const config = {
