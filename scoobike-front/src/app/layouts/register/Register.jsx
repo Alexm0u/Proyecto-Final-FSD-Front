@@ -140,6 +140,26 @@ export function Register() {
                                 <div>{credencialesError.emailError}</div>
                                 <Form.Group>
                                     <Form.Label>
+                                        Teléfono:
+                                    </Form.Label>
+                                    <InputText
+                                        className={
+                                            credencialesError.nameError ===
+                                            ""
+                                                ? "inputBasicDesign"
+                                                : "inputBasicDesign inputErrorDesign"
+                                        }
+                                        type={"text"}
+                                        name={"phone"}
+                                        placeholder={"Teléfono..."}
+                                        required={true}
+                                        changeFunction={(e) => inputHandler(e)}
+                                        blurFunction={(e) => checkError(e)}
+                                    />
+                                </Form.Group>
+                                <div>{credencialesError.nameError}</div>
+                                <Form.Group>
+                                    <Form.Label>
                                         Password:
                                     </Form.Label>
                                     <InputText
