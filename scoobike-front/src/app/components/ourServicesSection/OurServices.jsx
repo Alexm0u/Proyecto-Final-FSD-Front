@@ -10,7 +10,7 @@ const OurServices = () => {
     <div className="ourServices" id='services'>
       <div className="service-container">
 
-        <h1 className='header-serv'>Consulta sobre nuestros servicios de mantenimiento y reparación</h1>
+        <a className='header-serv' href="/about">Consulta sobre nuestros servicios de mantenimiento y reparación</a>
         <div className="servicios-img">
           
           <img className='serv-img' src={imgServ1} alt="imagen serv 1" />
