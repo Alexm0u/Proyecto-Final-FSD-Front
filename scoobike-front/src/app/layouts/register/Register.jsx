@@ -97,7 +97,7 @@ export function Register() {
             <div className="container">
                 <h4>Nuevo usuario:</h4>
                     <Row className="registerForm">
-                        <Col lg={6}>
+                        
                             <Form>
                                 <Form.Group>
                                     <Form.Label>
@@ -171,7 +171,7 @@ export function Register() {
                                     Crear usuario
                                 </Button>
                             </Form>
-                        </Col>
+                        
                     </Row>
                 
             </div>

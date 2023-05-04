@@ -1,7 +1,7 @@
 .registerForm {
     padding: 4rem;
     height: 20rem;
-    width: 20rem;
+    width: 100%rem;
     background-color: darkgrey;
     border-radius: 0.5em;
     display:flex;
@@ -16,4 +16,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+#InputText{
+    height: 80%;
 }

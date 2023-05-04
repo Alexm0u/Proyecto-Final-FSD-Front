@@ -112,7 +112,7 @@ export function Login() {
                 <Col>
                 <div className='formulario'>
                     <Form>
-                        <Form.Group>
+                        <Form.Group className='mailLogin-form'>
                             <Form.Label>Email:</Form.Label>
                             <InputText
                                 className={
@@ -128,7 +128,7 @@ export function Login() {
                                 blurFunction={(e) => checkError(e)}
                             />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group className='passwordLogin-form'>
                             <Form.Label>Password:</Form.Label>
                             <InputText
                                 className={
