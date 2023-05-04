@@ -14,6 +14,7 @@ import NavBar from './app/components/NavBar/NavBar';
 import { Footer } from './app/components/footer/Footer';
 import { UpdateAppointmentAsUser } from './app/layouts/updateAppointment/UpdateAppointmentAsUser';
 import { ProfileUpdate } from './app/layouts/profile/update/profileUpdate';
+import { GetAllAppointment } from './app/layouts/getAllAppointments/GetAllAppointments';
 
 export const Router = () => {
   return (
@@ -33,6 +34,7 @@ export const Router = () => {
         <Route path='/user/all' element={<GetAllUsers />} />
         <Route path='/user/all/details' element={<UserDetails />} />
         <Route path='/updateappointment' element= {<UpdateAppointmentAsUser/>} />
+        <Route path='/appointment/getall' element={<GetAllAppointment/>} />
     </Routes>
     <Footer/>
     </>
