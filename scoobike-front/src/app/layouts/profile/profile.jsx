@@ -31,7 +31,6 @@ export const Profile = () => {
           setUsers({
               name: result.data.data.name,
               email: result.data.data.email,
-              dni: result.data.data.dni,
               phone: result.data.data.phone,
               role_id: result.data.data.role_id,
           });
@@ -48,8 +47,7 @@ export const Profile = () => {
               <ListGroup variant="flush">
                   <ListGroup.Item>Nombre: {users.name}</ListGroup.Item>
                   <ListGroup.Item>Email: {users.email}</ListGroup.Item>
-                  {/* <ListGroup.Item>Dni_Nif: {users.dni_nif}</ListGroup.Item>
-                  <ListGroup.Item>Phone number: {users.phone}</ListGroup.Item> */}
+                  <ListGroup.Item>Phone number: {users.phone}</ListGroup.Item>
               </ListGroup>
           </Card>
        </div>
