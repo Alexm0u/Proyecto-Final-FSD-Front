@@ -45,9 +45,10 @@ export const Profile = () => {
        <div className='divCard'>
           <Card className='profileCard' style={{ width: '20rem' }}>
               <ListGroup variant="flush">
-                  <ListGroup.Item>Nombre: {users.name}</ListGroup.Item>
-                  <ListGroup.Item>Email: {users.email}</ListGroup.Item>
-                  <ListGroup.Item>Phone number: {users.phone}</ListGroup.Item>
+                  <ListGroup.Item>NOMBRE: {users.name}</ListGroup.Item>
+                  <ListGroup.Item>EMAIL: {users.email}</ListGroup.Item>
+                  <ListGroup.Item>TELÉFONO: {users.phone}</ListGroup.Item>
+                  <Button variant="primary" href='/user/profile/update' >Modificar datos usuario</Button>
               </ListGroup>
           </Card>
        </div>

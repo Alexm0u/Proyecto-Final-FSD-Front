@@ -46,6 +46,11 @@ export const updateAppointment = async (id, body, token) => {
   return await axios.put(`${root}/appointment/update/${id}`,body, config,)
 }
 
-  export const updateUser = async (body) => {
-    return await axios.put(`${root}updateprofile`, body);
-  }
+export const userUpdate = async (body, token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+    };
+  return await axios.put(`${root}/user/update/`, body, config)
+}

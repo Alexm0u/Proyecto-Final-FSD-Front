@@ -13,6 +13,7 @@ import { Route, Routes } from 'react-router-dom';
 import NavBar from './app/components/NavBar/NavBar';
 import { Footer } from './app/components/footer/Footer';
 import { UpdateAppointmentAsUser } from './app/layouts/updateAppointment/UpdateAppointmentAsUser';
+import { ProfileUpdate } from './app/layouts/profile/update/profileUpdate';
 
 export const Router = () => {
   return (
@@ -26,6 +27,7 @@ export const Router = () => {
         <Route path='/repairs' element={<Repairs/>} />;
         <Route path='/about' element={<About/>} />;
         <Route path='/user/profile' element={<Profile/>}/>;
+        <Route path='/user/profile/update' element={<ProfileUpdate />} />
         <Route path='/newappointment' element={<NewAppointment/>}/>;
         <Route path='/appointment/myappointment' element={<CatchAppointmentAsUser/>}/>;
         <Route path='/user/all' element={<GetAllUsers />} />

@@ -7,4 +7,10 @@
     display:flex;
     margin-top: 4rem ;
     margin-bottom: 4rem ;
+    justify-content: center;
+    align-items: center;
+}
+.divCard{
+    display: flex;
+    justify-content: center;
 }
