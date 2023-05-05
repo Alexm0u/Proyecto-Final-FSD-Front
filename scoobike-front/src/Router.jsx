@@ -15,6 +15,8 @@ import { Footer } from './app/components/footer/Footer';
 import { UpdateAppointmentAsUser } from './app/layouts/updateAppointment/UpdateAppointmentAsUser';
 import { ProfileUpdate } from './app/layouts/profile/update/profileUpdate';
 import { GetAllAppointment } from './app/layouts/getAllAppointments/GetAllAppointments';
+import { UpdateUserAsAdmin} from './app/layouts/getUsersAsAdmin/UpdateUserAsAdmin';
+import { UpdateAppAsAdmin } from './app/layouts/getUsersAsAdmin/UpdateAppAsAdmin';
 
 export const Router = () => {
   return (
@@ -35,6 +37,8 @@ export const Router = () => {
         <Route path='/user/all/details' element={<UserDetails />} />
         <Route path='/updateappointment' element= {<UpdateAppointmentAsUser/>} />
         <Route path='/appointment/getall' element={<GetAllAppointment/>} />
+        <Route path='/user/all/details/updateasadmin' element={<UpdateUserAsAdmin/>} />
+        <Route path='/user/update/updateAsAdmin' element={<UpdateAppAsAdmin/>} />
     </Routes>
     <Footer/>
     </>

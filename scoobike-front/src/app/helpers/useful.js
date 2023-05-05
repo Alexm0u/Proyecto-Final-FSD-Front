@@ -75,5 +75,4 @@ export const validate = (name, data, required) => {
                 return { message: "", validated: true };
               }
     };
-
 };

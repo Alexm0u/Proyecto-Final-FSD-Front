@@ -61,6 +61,25 @@ export const userUpdate = async (body, token) => {
     };
   return await axios.put(`${root}/user/update/`, body, config)
 }
+export const userUpdateAsAdmin = async (id, body, token,) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+    };
+  return await axios.put(`${root}/user/update/updateAsAdmin/${id}`, body, config)
+
+}
+
+export const appUpdateAsAdmin = async (id, body, token,) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+    };
+  return await axios.put(`${root}/user/update/updateAsAdmin/${id}`, body, config)
+
+}
 export const changeRole = async (body, token) => {
   const { id, role_id } = body;
   // const userId = req.params.id

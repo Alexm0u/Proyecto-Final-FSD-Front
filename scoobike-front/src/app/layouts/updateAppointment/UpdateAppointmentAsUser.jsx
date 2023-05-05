@@ -47,7 +47,6 @@ export const UpdateAppointmentAsUser = () => {
   });
 
   const inputHandler = (e) => {
-    console.log(e.target.value);
     setAppointments((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
@@ -72,7 +71,7 @@ export const UpdateAppointmentAsUser = () => {
         console.error(error.message);
       });
   };
-console.log (appointments)
+
   return (
 
     <div className="container">

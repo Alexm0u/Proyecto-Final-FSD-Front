@@ -12,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 import { validate } from "../../helpers/useful";
 
 
-
 export const NewAppointment = () => {
   const navigate = useNavigate();
   const ReduxCredentials = useSelector(userData);
