@@ -9,6 +9,8 @@ import { appointmentData } from "../appointmentSlice";
 import "./newAppointment.css";
 import { InputText } from "../../components/InputText/InputText";
 import { useNavigate } from "react-router-dom";
+import { validate } from "../../helpers/useful";
+
 
 
 export const NewAppointment = () => {
@@ -44,17 +46,68 @@ export const NewAppointment = () => {
     date: "",
   });
 
-  const inputHandler = (e) => {
-    console.log(e.target.value);
+  const [appointmentsError, setAppointmentsError] = useState({
+    service_idError: "",
+    mechanic_idError: "",
+    dateError: "",
+});
+
+const [valiAppointments, setValiAppointments] = useState({
+    service_idVali: false,
+    mechanic_idVali: false,
+    dateVali: false,
+});
+
+const [registerAct, setRegisterAct] = useState(false);
+
+const inputHandler = (e) => {
     setAppointments((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
+        ...prevState,
+        [e.target.name]: e.target.value,
     }));
+};
+
+useEffect(() => {
+    for (let error in appointmentsError) {
+        if (appointmentsError[error] !== "") {
+            setRegisterAct(false);
+            return;
+        }
+    }
+    for (let vacio in appointments) {
+        if (appointments[vacio] === "") {
+            setRegisterAct(false);
+            return;
+        }
+    }
+    for (let validated in valiAppointments) {
+        if (valiAppointments[validated] === false) {
+            setRegisterAct(false);
+            return;
+        }
+    }
+    setRegisterAct(true);
+});
+console.log (valiAppointments, appointments)
+const checkError = (e) => {
+    let error = "";
+    const checked = validate(
+        e.target.name,
+        e.target.value,
+        e.target.required
+    );
+    error = checked.message;
+
+    setValiAppointments((prevState) => ({
+        ...prevState,
+        [e.target.name + "Vali"]: checked.validated,
+    }));
+
+    setAppointmentsError((prevState) => ({
+        ...prevState,
+        [e.target.name + "Error"]: error,
+    }));;
   };
-
-
-  const checkError = (e) => { };
-  //
 
   const registerappointment = () => {
     nuevoAppointment(appointments, ReduxCredentials.credentials.token)
@@ -86,6 +139,7 @@ export const NewAppointment = () => {
               )
             })}
           </Form.Select>
+          <div>{appointmentsError.service_idError}</div>
           <Form.Select className="dropdown" name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
             <option>Escoge mecánico y especialidad:</option>
 
@@ -95,6 +149,7 @@ export const NewAppointment = () => {
               )
             })}
           </Form.Select>
+          <div>{appointmentsError.mechanic_idError}</div>
           <Form.Group>
             <Form.Label className="date-hour">Fecha y hora:</Form.Label>
             <InputText
@@ -107,6 +162,7 @@ export const NewAppointment = () => {
               blurFunction={(e) => checkError(e)}
             />
           </Form.Group>
+          <div>{appointmentsError.dateError}</div>
           <br />
           <div className="botonModificar">
             <Button variant="primary" onClick={registerappointment}>
