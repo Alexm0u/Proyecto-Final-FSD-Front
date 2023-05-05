@@ -79,8 +79,6 @@ export const NewAppointment = () => {
         <Form>
           <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
             <option>Escoge servicio:</option>
-            {/* <option value="1">Extraccion</option>
-            <option value="2">Blanqueamiento</option> */}
 
             {services.map((service) => {
               return (
