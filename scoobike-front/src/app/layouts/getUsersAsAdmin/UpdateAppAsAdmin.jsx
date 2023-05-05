@@ -8,6 +8,7 @@ import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import { InputText } from '../../components/InputText/InputText';
 import { validate } from '../../helpers/useful';
 import { appointmentData } from '../appointmentSlice';
+import { userData } from '../userSlice';
 
 export const UpdateAppAsAdmin = () => {
     //conexion a RDX en modo lectura
@@ -15,7 +16,7 @@ export const UpdateAppAsAdmin = () => {
     const params = detailRedux?.choosenObject?.id;
     const email = detailRedux?.choosenObject?.email;
     const detallesAppointment = useSelector(appointmentData);
-    // const credentialsRdx = useSelector(userData);
+    const credentialsRdx = useSelector(userData);
     // const navigate = useNavigate();
 
     const [services, setServices] = useState([
@@ -70,6 +71,7 @@ export const UpdateAppAsAdmin = () => {
     });
 
     const [registerAct, setRegisterAct] = useState(false);
+    const [welcome, setWelcome] = useState("");
 
     useEffect(() => {
         for (let error in appointmentError) {
@@ -104,12 +106,12 @@ export const UpdateAppAsAdmin = () => {
         );
 
         error = checked.message;
-        setValiuser((prevState) => ({
+        setValiAppointment((prevState) => ({
             ...prevState,
             [e.target.name + "Vali"]: checked.validated,
         }));
 
-        setUserError((prevState) => ({
+        setAppointmentError((prevState) => ({
             ...prevState,
             [e.target.name + "Error"]: error,
         }));

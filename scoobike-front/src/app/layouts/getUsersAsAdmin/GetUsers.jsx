@@ -36,13 +36,12 @@ export const GetAllUsers = () => {
 
 
     return (
-        <><div className='profile-container'>
+        <>
+        <div className='profile-container'>
             <div className='usersDesign'>
                 {users.length > 0 ?
                     (<div>
-                        {
-                            users.map(
-                                persona => {
+                        {users.map(persona => {
                                     return (
                                         <div
                                             onClick={() => selected(persona)}

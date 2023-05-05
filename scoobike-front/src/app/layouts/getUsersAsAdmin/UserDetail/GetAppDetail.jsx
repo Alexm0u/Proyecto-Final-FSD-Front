@@ -8,7 +8,7 @@ import { userData } from '../../userSlice';
 import { userUpdateAsAdmin } from '../../services/apiCalls';
 
 
-export const UserDetails = () => {
+export const AppointmentDetails = () => {
 
     const credentialsRdx = useSelector(userData);
     let email = credentialsRdx?.credentials?.email;
@@ -18,29 +18,22 @@ export const UserDetails = () => {
 
     const updateUser = () => {
         setTimeout(() => {
-            navigate("/user/all/details/updateasadmin");
+            navigate("/user/update/updateAsAdmin");
         }, 2500);
     };
 
     return (
         <>
-
             <div className=''>
-                <div className='texto'>Nombre Usuario: </div>
+                <div className='texto'>Fecha: </div>
+                {detailRedux?.choosenObject?.date}
+                <div className='texto'>ID del Mecánico: </div>
+                {detailRedux?.choosenObject?.mechanic_id}
+                <div className='texto'>Nombre cliente: </div>
                 {detailRedux?.choosenObject?.name}
-                <div className='texto'>Email: </div>
-                {detailRedux?.choosenObject?.email}
-                <div className='texto'>DNI: </div>
-                {detailRedux?.choosenObject?.dni}
-                <div className='texto'>Teléfono: </div>
-                {detailRedux?.choosenObject?.phone}
-                <div className='texto'>Role Id: </div>
-                {detailRedux?.choosenObject?.role_id}
-                <div className='texto'>Comments: </div>
-                {detailRedux?.choosenObject?.comments}
             </div>
             <Button variant="primary" onClick={updateUser}>
-                Modificar datos usuario
+                Modificar cita usuario
             </Button>
 
         </>
