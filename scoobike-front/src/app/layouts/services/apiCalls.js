@@ -84,11 +84,13 @@ export const userUpdateAsAdmin = async (id, body, token,) => {
 
 export const appUpdateAsAdmin = async (id, body, token,) => {
   let config = {
-    headers: { 
-      'Authorization': 'Bearer '+ token,  
-    }
-    };
-  return await axios.put(`${root}/user/update/updateAsAdmin/${id}`, body, config)
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },};
+    console.log(id)
+    console.log(body)
+    console.log(token)
+  return await axios.put(`${root}/appointment/updateasadmin/${id}`, body, config)
 
 }
 export const changeRole = async (body, token) => {

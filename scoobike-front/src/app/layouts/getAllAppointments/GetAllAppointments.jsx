@@ -24,13 +24,13 @@ export const GetAllAppointment = () => {
         }
     }, [appointments]);
 
-    const selected = (appointment) => {
-        dispatch(addChoosen({ choosenObject: appointment }))
+    const selected = (allAppointment) => {
+        dispatch(addChoosen({ choosenObject: allAppointment }))
         setTimeout(() => {
             navigate("/appointment/all/details");
         }, 500);
     }
-
+    console.log(appointments)
     return (
         <>
             <div>

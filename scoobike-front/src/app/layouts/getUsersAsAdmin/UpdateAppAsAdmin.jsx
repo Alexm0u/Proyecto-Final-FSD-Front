@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
-// import { detailData } from '../detailSlice';
-// import { userData } from '../userSlice';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { appUpdateAsAdmin, userUpdateAsAdmin } from '../services/apiCalls';
+import {  useNavigate } from 'react-router-dom';
+import { appUpdateAsAdmin } from '../services/apiCalls';
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import { InputText } from '../../components/InputText/InputText';
 import { validate } from '../../helpers/useful';
-import { appointmentData } from '../appointmentSlice';
 import { userData } from '../userSlice';
+import { detailData } from '../detailSlice';
+
+
 
 export const UpdateAppAsAdmin = () => {
     //conexion a RDX en modo lectura
-    const detailRedux = useSelector(appointmentData);
-    const params = detailRedux?.choosenObject?.id;
-    const email = detailRedux?.choosenObject?.email;
-    const detallesAppointment = useSelector(appointmentData);
+    const detalleData = useSelector(detailData)
+    const params = detalleData?.choosenObject?.id;
     const credentialsRdx = useSelector(userData);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
+    
 
     const [services, setServices] = useState([
         {
@@ -40,10 +39,10 @@ export const UpdateAppAsAdmin = () => {
         }
     ]);
     const [appointments, setAppointments] = useState({
-        id: params,
+
         service_id: "",
         mechanic_id: "",
-        // user_id: "",
+       
         date: "",
     });
 
@@ -54,76 +53,21 @@ export const UpdateAppAsAdmin = () => {
         }));
     };
 
-    const [valiAppointment, setValiAppointment] = useState({
-
-        nameVali: false,
-        phoneVali: false,
-        emailVali: true,
-
-    });
-
-    const [appointmentError, setAppointmentError] = useState({
-
-        nameError: "",
-        phoneError: "",
-        emailError: "",
-
-    });
-
     const [registerAct, setRegisterAct] = useState(false);
     const [welcome, setWelcome] = useState("");
 
-    useEffect(() => {
-        for (let error in appointmentError) {
-            if (appointmentError[error] != "") {
-                setRegisterAct(false);
-                return;
-            }
-        }
-
-        for (let empty in appointments) {
-            if (appointments[empty] === "") {
-                setRegisterAct(false);
-                return;
-            }
-        }
-
-        for (let validated in valiAppointment) {
-            if (valiAppointment[validated] === false) {
-                setRegisterAct(false);
-                return;
-            }
-        }
-        setRegisterAct(true);
-    });
-
     const checkError = (e) => {
-        let error = "";
-        let checked = validate(
-            e.target.name,
-            e.target.value,
-            e.target.required
-        );
-
-        error = checked.message;
-        setValiAppointment((prevState) => ({
-            ...prevState,
-            [e.target.name + "Vali"]: checked.validated,
-        }));
-
-        setAppointmentError((prevState) => ({
-            ...prevState,
-            [e.target.name + "Error"]: error,
-        }));
+        
     };
 
     const updateUserAppointment = () => {
-        appUpdateAsAdmin(params, credentialsRdx?.credentials?.token);
+        appUpdateAsAdmin(params, appointments, credentialsRdx?.credentials?.token);
         setWelcome(`Datos actualizados correctamente`);
         setTimeout(() => {
-            Navigate("/appointment/getall");
+            navigate("/appointment/getall");
         }, 2500);
     };
+    console.log(detalleData, "Hola")
 
     return (
         <div className="container">
