@@ -40,11 +40,9 @@ export const GetAllAppointment = () => {
                         {appointments.map(appointment => {
                             return (
                                 <div onClick={() => selected(appointment)} key={appointment.id}>
-                                    <div className="text-center">
-                                        <div> {appointment.date}</div>
-                                        <div> Mechanico ID: {appointment.mechanic_id}</div>
-                                        <div> Nombre Cliente: {appointment.User.name}</div>
-                                    </div>
+                                    <div> {appointment.date}</div>
+                                    <div> Mecanico ID: {appointment.mechanic_id}</div>
+                                    <div> Nombre Cliente: {appointment.User.name}</div>
                                 </div>
                             );
                         })}

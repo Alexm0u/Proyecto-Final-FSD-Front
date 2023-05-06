@@ -34,32 +34,31 @@ export const GetAllUsers = () => {
         }, 500);
     }
 
-
     return (
         <>
-        <div className='profile-container'>
-            <div className='usersDesign'>
-                {users.length > 0 ?
-                    (<div>
-                        {users.map(persona => {
-                                    return (
-                                        <div
-                                            onClick={() => selected(persona)}
-                                            key={persona.id}>
-                                            <div className="text-center">
-                                                <p className="nameDesign">{persona.name}</p>
-                                            </div>
+            <div className='profile-container'>
+                <div className='usersDesign'>
+                    {users.length > 0 ?
+                        (<div>
+                            {users.map(persona => {
+                                return (
+                                    <div
+                                        onClick={() => selected(persona)}
+                                        key={persona.id}>
+                                        <div className="text-center">
+                                            <p className="nameDesign">{persona.name}</p>
                                         </div>
-                                    )
-                                }
+                                    </div>
+                                )
+                            }
                             )
-                        }
-                    </div>)
-                    :
-                    (<div>A continuación se muestran los usuarios</div>)
-                }
+                            }
+                        </div>)
+                        :
+                        (<div>A continuación se muestran los usuarios</div>)
+                    }
+                </div>
             </div>
-        </div>
         </>
     );
 }
