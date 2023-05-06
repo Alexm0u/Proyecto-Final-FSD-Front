@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 // import { detailData } from '../detailSlice';
 // import { userData } from '../userSlice';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { appUpdateAsAdmin, userUpdateAsAdmin } from '../services/apiCalls';
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import { InputText } from '../../components/InputText/InputText';
@@ -121,7 +121,7 @@ export const UpdateAppAsAdmin = () => {
         appUpdateAsAdmin(params, credentialsRdx?.credentials?.token);
         setWelcome(`Datos actualizados correctamente`);
         setTimeout(() => {
-            navigate("/appointment/getall");
+            Navigate("/appointment/getall");
         }, 2500);
     };
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { About } from './app/layouts/About/about';
-import { Repairs } from './app/layouts/repairs/Repairs';
 import { Home } from './app/layouts/home/Home';
 import { Login } from './app/layouts/login/Login';
 import { NewAppointment } from './app/layouts/newAppointment/NewAppointment';
@@ -18,6 +17,7 @@ import { GetAllAppointment } from './app/layouts/getAllAppointments/GetAllAppoin
 import { UpdateUserAsAdmin} from './app/layouts/getUsersAsAdmin/UpdateUserAsAdmin';
 import { UpdateAppAsAdmin } from './app/layouts/getUsersAsAdmin/UpdateAppAsAdmin';
 import { AppointmentDetails } from './app/layouts/getUsersAsAdmin/UserDetail/GetAppDetail';
+import { GetMyAppointmentAsMechanic } from './app/layouts/getAllAppointments/GetAllAppAsMech';
 
 export const Router = () => {
   return (
@@ -28,12 +28,12 @@ export const Router = () => {
         <Route path='/' element={<Home/>} />;
         <Route path='/login' element={<Login/>} />;
         <Route path='/register' element={<Register/>} />;
-        <Route path='/repairs' element={<Repairs/>} />;
         <Route path='/about' element={<About/>} />;
         <Route path='/user/profile' element={<Profile/>}/>;
         <Route path='/user/profile/update' element={<ProfileUpdate />} />
         <Route path='/newappointment' element={<NewAppointment/>}/>;
         <Route path='/appointment/myappointment' element={<CatchAppointmentAsUser/>}/>;
+        <Route path='/appointmentAsMechanic' element={<GetMyAppointmentAsMechanic/>}/>;
         <Route path='/user/all' element={<GetAllUsers />} />
         <Route path='/user/all/details' element={<UserDetails />} />
         <Route path='/updateappointment' element= {<UpdateAppointmentAsUser/>} />

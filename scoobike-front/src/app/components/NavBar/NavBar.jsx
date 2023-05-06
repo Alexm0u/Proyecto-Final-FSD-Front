@@ -44,7 +44,7 @@ function NavBar() {
                   <>
                   <Nav.Link className='navbarButton' as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
                   <Nav.Link className='navbarButton' as={Link} to='/newappointment'>Nueva cita</Nav.Link>
-                  <Nav.Link className='navbarButton' as={Link} to='/user/all'>Todos los usuarios</Nav.Link>
+                  <Nav.Link className='navbarButton' as={Link} to='/appointmentAsMechanic'>Todas las citas</Nav.Link>
                   <Nav.Link className='navbarButton' as={Link} to='/user/profile'>Perfil</Nav.Link>
                 </>
                 ) : credencialesRedux?.credentials?.usuario?.roleId === 1 ? (
