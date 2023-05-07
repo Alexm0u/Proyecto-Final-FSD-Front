@@ -25,9 +25,9 @@ Este proyecto requería conexión a una API funcional y usar react para crear un
 ## Sobre el proyecto 🔎
 Decidí crear una aplicación web para ayudar a gestionar un pequeño taller de reparación y mantenimiento de bicicletas y patinetes y que les permitiría crear y realizar un seguimiento de nuevas citas para sus tareas diarias. He visto varios talleres que funcionan a la vieja usanza (papel y boli) o en su defecto con hojas de Excel que no aportan fluidez a la organización.
 
-La aplicación es totalmente escalable e incluso adaptativa para que en lugar de usarse en un taller de bicis se pudiese utilizar en otro tipo de talleres (Coches, motos e incluso reparación y mantenimiento de muebles).
+La aplicación es totalmente escalable e incluso adaptativa para que en lugar de usarse en un taller de bicis se pudiese utilizar en otro tipo de talleres (coches, motos e incluso reparación y mantenimiento de muebles).
 
-En resumen, se trata de una aplicación (que en este caso he tematizado) pero puede ser usada por cualquier pequeño autónomo para ser adaptada a su día a día.
+En resumen, se trata de una aplicación (que en este caso he tematizado) pero puede ser usada por cualquier pequeño autónomo para ser adaptada a su actividad.
   
 ## Deploy 🚀
 <div align="center">
@@ -51,22 +51,34 @@ En resumen, se trata de una aplicación (que en este caso he tematizado) pero pu
 4. ...
 
 ## Vistas
-Landing
+Home
 <img src="./images/landing.png">  
-Register
-<img src="./images/register.png">
 Login
+<img src="./images/register.png">
+Registro
 <img src="./images/login.png">
-Profile
+Sobre nosotros
 <img src="./images/profile.png">
-Routines
+Mi perfil
 <img src="./images/routines.png">
-Exercices
+Modificar perfil
+<img src="./images/exercises.png">
+Mis citas
+<img src="./images/exercises.png">
+Modificar cita
+<img src="./images/exercises.png">
+Listado usuarios como Admin
+<img src="./images/exercises.png">
+Listado usuarios como Admin
+<img src="./images/exercises.png">
+Modificar perfil como Admin
+<img src="./images/exercises.png">
+Modificar citas como Admin
 <img src="./images/exercises.png">
 
 ## Futuras funcionalidades
 ⬜ Ver citas filtradas por mecánico y especialidad
-⬜ Mejorar experiencia visual
+⬜ Mejorar experiencia visual y dar formato y estilos a las vistas
 ⬜ ...  
 
 ## Contribuciones
@@ -91,13 +103,8 @@ Puedes hacerlo de dos maneras:
     - Abre una solicitud de Pull Request
 
 ## Licencia
-Este proyecto se encuentra bajo licencia de "Mi Nombre"
+Este proyecto se encuentra bajo licencia de Álex Moya.
 
-## Webgrafia:
-Para conseguir mi objetivo he recopilado información de:
-- link a repositorios 
-- link a documentacion de librerias externas
-- ...
 
 ## Desarrollo:
 
@@ -112,16 +119,21 @@ Para conseguir mi objetivo he recopilado información de:
 Agradezco a mis compañeros el tiempo dedicado a este proyecto:
 
 - *Álvaro*  
-<a href="https://github.com/Dave86dev" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+<a href="https://github.com/AlvaroBernabe" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
 
 - **Ramón**  
-<a href="https://www.github.com/userGithub/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=red" target="_blank"></a>
+<a href="https://www.github.com/RamonFolguera" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=red" target="_blank"></a>
 
 - ***Dani***  
-<a href="https://www.github.com/userGithub/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a> 
+<a href="https://www.github.com/datata/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a> 
+
+- ***Jose***  
+<a href="https://www.github.com/JoseMarin/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
 
 ## Contacto
 
-<a href = "mailto:micorreoelectronico@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/linkedinUser/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<a href = "mailto:alex.moyacamps@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/alejandro-moya-camps-5448a477/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </p> -->
+
+
