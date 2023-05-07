@@ -90,8 +90,8 @@ Modificar citas como Admin
 
 ## Futuras funcionalidades
 ⬜ Ver citas filtradas por mecánico y especialidad
-⬜ Mejorar experiencia visual y dar formato y estilos a las vistas
-⬜ ...  
+⬜ Mejorar experiencia visual (formato/estilos)
+
 
 ## Contribuciones
 Las sugerencias y aportaciones son siempre bienvenidas.  
