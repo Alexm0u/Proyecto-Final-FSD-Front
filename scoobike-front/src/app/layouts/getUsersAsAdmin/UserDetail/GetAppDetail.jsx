@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { detailData } from '../../detailSlice';
-import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
-import { Form, useNavigate } from 'react-router-dom';
-import { InputText } from '../../../components/InputText/InputText';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { userData } from '../../userSlice';
-import { userUpdateAsAdmin } from '../../services/apiCalls';
+
 
 
 export const AppointmentDetails = () => {
@@ -24,7 +22,7 @@ export const AppointmentDetails = () => {
 
     return (
         <>
-            <div className=''>
+            <div className='appointments-list'>
                 <div className='texto'>Fecha: </div>
                 {detailRedux?.choosenObject?.date}
                 <div className='texto'>ID del Mecánico: </div>

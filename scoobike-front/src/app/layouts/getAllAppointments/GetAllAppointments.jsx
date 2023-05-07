@@ -5,6 +5,7 @@ import { getAllAppoinment } from "../services/apiCalls";
 import { userData } from "../userSlice";
 import { useNavigate } from "react-router-dom";
 import { addChoosen } from "../detailSlice";
+import './GetAllAppointments.css'
 
 export const GetAllAppointment = () => {
     const ReduxCredentials = useSelector(userData);
@@ -39,10 +40,11 @@ export const GetAllAppointment = () => {
                     <div className="cardsContainer">
                         {appointments.map(appointment => {
                             return (
-                                <div onClick={() => selected(appointment)} key={appointment.id}>
-                                    <div> {appointment.date}</div>
-                                    <div> Mecanico ID: {appointment.mechanic_id}</div>
-                                    <div> Nombre Cliente: {appointment.User.name}</div>
+                                <div  className="app-card" onClick={() => selected(appointment)} key={appointment.id}>
+                                    <div className="text"> NOMBRE CLIENTE: {appointment.User.name}</div>
+                                    <div className="text">FECHA: {appointment.date}</div>
+                                    <div className="text"> MECÁNICO ID: {appointment.mechanic_id}</div>
+                                    
                                 </div>
                             );
                         })}

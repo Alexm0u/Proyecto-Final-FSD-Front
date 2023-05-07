@@ -1,0 +1,8 @@
+.app-card{
+    margin-top: 1rem;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -7,6 +7,7 @@ import { userUpdateAsAdmin } from '../services/apiCalls';
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import { InputText } from '../../components/InputText/InputText';
 import { validate } from '../../helpers/useful';
+import './UpdateUserAsAdmin.css'
 
 export const UpdateUserAsAdmin = () => {
     //conexion a RDX en modo lectura
