@@ -99,7 +99,7 @@ export const ProfileUpdate = () => {
         userUpdate(user, credentialsRdx.credentials.token);
         setWelcome(`Datos actualizados correctamente`);
         setTimeout(() => {
-            navigate("/user/myprofile");
+            navigate("/user/profile");
         }, 2500);
     };
 
