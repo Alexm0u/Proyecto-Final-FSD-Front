@@ -1,16 +1,12 @@
-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    /* position:fixed; */
-}
+
 .hero-container {
-    height: 100%;
+    margin: 0;
+    height: 20vh;
     width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    background-repeat: no-repeat;
     background-color:rgb(37, 36, 36);
-    object-fit: contain;
     color: whitesmoke;
+    object-fit: cover;
 }
+
+

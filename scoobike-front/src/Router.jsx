@@ -23,7 +23,7 @@ export const Router = () => {
   return (
     <>
     <NavBar/>
-    <hr/>
+    <br />
     <Routes>
         <Route path='/' element={<Home/>} />;
         <Route path='/login' element={<Login/>} />;

@@ -35,7 +35,8 @@
 .servicios-img{
     display:flex;
     height: 15%;
-    width: 90%;
+    width: 70%;
     gap: 0.1rem;
+    object-fit: contain;
    
 }
