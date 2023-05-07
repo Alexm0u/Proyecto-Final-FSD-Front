@@ -150,7 +150,7 @@ export function Login() {
                             <Button variant="primary" className='botonLogin' onClick={() => logeame()}>
                                 Acceder
                             </Button>
-                            <div>Todavía no eres usuario?</div>
+                            <div>¿Todavía no eres usuario?</div>
                             <Button className='boton-cita' variant="primary" href='/register'>Regístrate</Button>
                         
                         </div>

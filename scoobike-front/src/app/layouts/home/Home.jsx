@@ -14,9 +14,6 @@ export const Home = () => {
   return (
     <>
     <HeroSection/>
-     
-     
-      
     <OurServices/>
       
 </>

@@ -1,12 +1,12 @@
 
 .hero-container {
     margin: 0;
-    height: 20vh;
+    height: 9vh;
     width: 100%;
     background-repeat: no-repeat;
     background-color:rgb(37, 36, 36);
     color: whitesmoke;
-    object-fit: cover;
+    text-align: center;
 }
 
 

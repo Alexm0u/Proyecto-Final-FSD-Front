@@ -6,7 +6,7 @@
 }
 .header-serv {
     display: flex;
-    gap: 5rem;
+    gap: rem;
     font-weight: bold;
     justify-content: center;
     color: whitesmoke;
@@ -14,8 +14,6 @@
     font-style: italic;
     background-color: rgb(37, 36, 36);
 }
-
-
 .serv-img{
     display:grid;
     width: 33%;
