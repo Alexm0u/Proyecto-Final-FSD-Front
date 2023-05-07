@@ -82,10 +82,10 @@ Listado usuarios como Admin
 ![Usuarios admin](https://user-images.githubusercontent.com/121814511/236672247-aacdc864-93e1-4255-a2a9-e54e24b4fd15.JPG)
 
 Modificar perfil como Admin
-<img src="./images/exercises.png">
+![Modificar usuario Admin](https://user-images.githubusercontent.com/121814511/236672526-ab7b32d1-cae1-4b87-9f13-28b02b1c27df.JPG)
 
 Modificar citas como Admin
-<img src="./images/exercises.png">
+![Modificar cita Admin](https://user-images.githubusercontent.com/121814511/236672524-4d7835fe-3906-4b84-82d1-2921ddf1c2e5.JPG)
 
 
 ## Futuras funcionalidades
@@ -143,6 +143,8 @@ Agradezco a mis compañeros el tiempo dedicado a este proyecto:
 <a href="https://www.github.com/JoseMarin/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
 
 ## Contacto
+
+
 
 <a href = "mailto:alex.moyacamps@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/alejandro-moya-camps-5448a477/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
