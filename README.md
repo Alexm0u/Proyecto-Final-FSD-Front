@@ -52,25 +52,25 @@ En resumen, se trata de una aplicación (que en este caso he tematizado) pero pu
 
 ## Vistas
 Home
-<img src="./images/landing.png">  
+![Home](https://user-images.githubusercontent.com/121814511/236672251-376d161f-4b6e-46f7-ba8d-6a3bf4cbd811.JPG)  
 Login
-<img src="./images/register.png">
+![Login](https://user-images.githubusercontent.com/121814511/236672257-388fd3d2-f32e-4a49-bf19-69ca3457516d.JPG)
 Registro
-<img src="./images/login.png">
+![Registro](https://user-images.githubusercontent.com/121814511/236672255-a3478631-8165-499a-9c2c-697dc1087856.JPG)
 Sobre nosotros
-<img src="./images/profile.png">
+![About](https://user-images.githubusercontent.com/121814511/236672256-98ecea88-35fb-4b6b-b763-b8fb8f1aee95.JPG)
 Mi perfil
-<img src="./images/routines.png">
-Modificar perfil
-<img src="./images/exercises.png">
+![Perfil usuario](https://user-images.githubusercontent.com/121814511/236672252-3ba1065f-c329-4c5c-9a00-e55afae14a37.JPG)
+Modificar usuario
+![Modificar usuario Admin](https://user-images.githubusercontent.com/121814511/236672259-ea8df003-3d03-4e15-a1d9-5525896481e2.JPG)
 Mis citas
-<img src="./images/exercises.png">
+![Mis citas](https://user-images.githubusercontent.com/121814511/236672254-cb99f34d-1d8f-4514-99eb-a722012a4401.JPG)
 Modificar cita
-<img src="./images/exercises.png">
+![Modificar cita Admin](https://user-images.githubusercontent.com/121814511/236672258-27e4b87b-0ad7-4fb3-8771-e36b3b92088b.JPG)
+Listado citas como Admin
+![Citas admin](https://user-images.githubusercontent.com/121814511/236672249-c70040c9-d20e-4960-9b28-9992d19f46fb.JPG)
 Listado usuarios como Admin
-<img src="./images/exercises.png">
-Listado usuarios como Admin
-<img src="./images/exercises.png">
+![Usuarios admin](https://user-images.githubusercontent.com/121814511/236672247-aacdc864-93e1-4255-a2a9-e54e24b4fd15.JPG)
 Modificar perfil como Admin
 <img src="./images/exercises.png">
 Modificar citas como Admin
@@ -135,5 +135,15 @@ Agradezco a mis compañeros el tiempo dedicado a este proyecto:
 <a href = "mailto:alex.moyacamps@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/alejandro-moya-camps-5448a477/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </p> -->
+
+
+
+
+
+
+
+
+
+
 
 
