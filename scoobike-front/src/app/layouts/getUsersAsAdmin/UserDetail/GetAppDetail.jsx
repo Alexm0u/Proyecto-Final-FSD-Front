@@ -3,6 +3,7 @@ import { detailData } from '../../detailSlice';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { userData } from '../../userSlice';
+import './GetAppDetail.css'
 
 
 
@@ -30,9 +31,10 @@ export const AppointmentDetails = () => {
                 <div className='texto'>Nombre cliente: </div>
                 {detailRedux?.choosenObject?.User.name}
             </div>
-            <Button variant="primary" onClick={updateUser}>
+            <Button className='boton' variant="primary" onClick={updateUser}>
                 Modificar cita usuario
             </Button>
+            
 
         </>
     )
