@@ -53,28 +53,40 @@ En resumen, se trata de una aplicación (que en este caso he tematizado) pero pu
 ## Vistas
 Home
 <img src="./images/landing.png">  
+
 Login
 <img src="./images/register.png">
+
 Registro
 <img src="./images/login.png">
+
 Sobre nosotros
 <img src="./images/profile.png">
+
 Mi perfil
 <img src="./images/routines.png">
+
 Modificar perfil
 <img src="./images/exercises.png">
+
 Mis citas
 <img src="./images/exercises.png">
+
 Modificar cita
 <img src="./images/exercises.png">
+
 Listado usuarios como Admin
 <img src="./images/exercises.png">
+
 Listado usuarios como Admin
 <img src="./images/exercises.png">
+
 Modificar perfil como Admin
 <img src="./images/exercises.png">
+
 Modificar citas como Admin
 <img src="./images/exercises.png">
+
 
 ## Futuras funcionalidades
 ⬜ Ver citas filtradas por mecánico y especialidad
