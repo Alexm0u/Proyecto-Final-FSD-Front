@@ -5,14 +5,11 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    position: relative;
 }
-.card-header{
-    background-color: whitesmoke;
-    color: rgb(37, 36, 36);
-}
+
 .card{
     background-color: darkgrey;
     color: rgb(37, 36, 36);
     margin-bottom:0.5rem ;
+    object-fit: fill;
 }
