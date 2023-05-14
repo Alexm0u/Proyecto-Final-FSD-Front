@@ -11,12 +11,14 @@ const OurServices = () => {
       <div className="service-container">
 
         <a className='header-serv' href="/about">Consulta sobre nuestros servicios de mantenimiento y reparación</a>
-        <div className="servicios-img">
-          
-          <img className='serv-img' src={imgServ1} alt="imagen serv 1" />
+
+          <div className="img-container">
+            <img className='serv-img' src={imgServ1} alt="imagen serv 1" />
           <img className='serv-img' src={imgServ2} alt="imagen serv 2" />
           <img className='serv-img' src={imgServ3} alt="imagen serv 3" />
-        </div>
+          </div>
+          
+
 
 
       </div>

@@ -30,11 +30,6 @@
     color: whitesmoke;
     margin-bottom: 0.2rem;
 }
-.servicios-img{
-    display:flex;
-    height: 15%;
-    width: 95%;
-    gap: 1rem;
-    object-fit: contain;
-   
+.img-container{
+    display: flex;
 }
