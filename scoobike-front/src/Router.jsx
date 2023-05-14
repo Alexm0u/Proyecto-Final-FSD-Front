@@ -1,23 +1,23 @@
 import React from 'react';
-import { About } from './app/layouts/About/about';
-import { Home } from './app/layouts/home/Home';
-import { Login } from './app/layouts/login/Login';
-import { NewAppointment } from './app/layouts/newAppointment/NewAppointment';
-import { CatchAppointmentAsUser } from './app/layouts/userAppointment/UserAppointment';
-import { Register } from './app/layouts/register/Register';
-import { Profile } from './app/layouts/profile/profile';
-import { GetAllUsers } from './app/layouts/getUsersAsAdmin/GetUsers';
-import { UserDetails } from './app/layouts/getUsersAsAdmin/UserDetail/GetUsersDetail';
+import { About } from './app/layouts/04-about/about';
+import { Home } from './app/layouts/00-home/Home';
+import { Login } from './app/layouts/01-login/Login';
+import { NewAppointment } from './app/layouts/03-newAppointment/NewAppointment';
+import { CatchAppointmentAsUser } from './app/layouts/06-userAppointment/UserAppointment';
+import { Register } from './app/layouts/02-register/Register';
+import { Profile } from './app/layouts/05-profile/profile';
+import { GetAllUsers } from './app/layouts/09-asAdmin/GetUsers';
+import { UserDetails } from './app/layouts/09-asAdmin/UserDetail/GetUsersDetail';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './app/components/NavBar/NavBar';
 import { Footer } from './app/components/footer/Footer';
-import { UpdateAppointmentAsUser } from './app/layouts/updateAppointment/UpdateAppointmentAsUser';
-import { ProfileUpdate } from './app/layouts/profile/update/profileUpdate';
-import { GetAllAppointment } from './app/layouts/getAllAppointments/GetAllAppointments';
-import { UpdateUserAsAdmin} from './app/layouts/getUsersAsAdmin/UpdateUserAsAdmin';
-import { UpdateAppAsAdmin } from './app/layouts/getUsersAsAdmin/UpdateAppAsAdmin';
-import { AppointmentDetails } from './app/layouts/getUsersAsAdmin/UserDetail/GetAppDetail';
-import { GetMyAppointmentAsMechanic } from './app/layouts/getAllAppointments/GetAllAppAsMech';
+import { UpdateAppointmentAsUser } from './app/layouts/08-updateAppointment/UpdateAppointmentAsUser';
+import { ProfileUpdate } from './app/layouts/05-profile/update/profileUpdate';
+import { GetAllAppointment } from './app/layouts/07-getAllAppointments/GetAllAppointments';
+import { UpdateUserAsAdmin} from './app/layouts/09-asAdmin/UpdateUserAsAdmin';
+import { UpdateAppAsAdmin } from './app/layouts/09-asAdmin/UpdateAppAsAdmin';
+import { AppointmentDetails } from './app/layouts/09-asAdmin/UserDetail/GetAppDetail';
+import { GetMyAppointmentAsMechanic } from './app/layouts/07-getAllAppointments/GetAllAppAsMech';
 
 export const Router = () => {
   return (
