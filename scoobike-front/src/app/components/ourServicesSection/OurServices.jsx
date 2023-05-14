@@ -1,7 +1,4 @@
 import React from 'react'
-import imgServ1 from '../../../img/ourserv1.jpeg'
-import imgServ2 from '../../../img/ourserv2.jpeg'
-import imgServ3 from '../../../img/ourserv3.jpeg'
 import './ourServices.css'
 
 
@@ -11,15 +8,6 @@ const OurServices = () => {
       <div className="service-container">
 
         <a className='header-serv' href="/about">Consulta sobre nuestros servicios de mantenimiento y reparación</a>
-
-          <div className="img-container">
-            <img className='serv-img' src={imgServ1} alt="imagen serv 1" />
-          <img className='serv-img' src={imgServ2} alt="imagen serv 2" />
-          <img className='serv-img' src={imgServ3} alt="imagen serv 3" />
-          </div>
-          
-
-
 
       </div>
 

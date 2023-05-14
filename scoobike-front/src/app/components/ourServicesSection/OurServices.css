@@ -14,11 +14,7 @@
     font-style: italic;
     background-color: rgb(37, 36, 36);
 }
-.serv-img{
-    display:grid;
-    width: 33%;
-    margin-bottom: 0.2rem;
-}
+
 .service-container {
     height: 100%;
     width: 100%;

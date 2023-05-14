@@ -5,11 +5,16 @@ import './HeroSection.css'
 
 const HeroSection = () => {
   return (
-    <div className='hero-container'>
-      <div className="hero-section">
+    <div className="container-fluid">
+        <h4>
+          <div>Bienvenido a Scoobike</div>
+        </h4>
 
+        
+
+        
         </div>
-    </div>
+        
   )
 }
 
