@@ -51,9 +51,9 @@ export const GetAllAppointment = () => {
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
                     <p className="pe-4 nameFieldDesign">Cita:</p>
-                    <p>
-                      {appointment.User.name} {appointment.date} {appointment.mechanic_id}
-                    </p>
+                    <p>Nombre:{appointment.User.name}</p>
+                    <p>Fecha:{appointment.date}</p>
+                    <p>Id del mecánico:{appointment.mechanic_id}</p>
                   </div>
                 </div>
               </div>
