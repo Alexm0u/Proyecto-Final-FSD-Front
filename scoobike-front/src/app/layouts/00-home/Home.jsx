@@ -1,8 +1,8 @@
 import React from 'react'
-import  imgbck   from '../../../img/backgroundhome.jpg'
 import './Home.css'
-import HeroSection from '../../components/hero/HeroSection'
 import OurServices from '../../components/ourServicesSection/OurServices'
+import { Col, Container, Row } from 'react-bootstrap'
+import Imgbck from '../../../img/bikeherosection.jpg'
 
 
 
@@ -13,9 +13,22 @@ import OurServices from '../../components/ourServicesSection/OurServices'
 export const Home = () => {
   return (
     <>
-    <HeroSection/>
-    <OurServices/>
+      <Container fluid>
+        <h4>
+          Bienvenido a Scoobike
+        </h4>
+        <Row className='Row-hero'>
+          <Col className='col-main' lg={12} xs={10}>
+            <img className='bck-img-home' src={Imgbck}></img>
+
+
+
+          </Col>
+        </Row>
+      </Container>
+      <OurServices />
       
-</>
+
+    </>
   )
 }

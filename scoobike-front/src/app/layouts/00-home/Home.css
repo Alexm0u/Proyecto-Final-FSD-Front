@@ -1,7 +1,22 @@
-/* .bck-img {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    padding: 0;
-} */
+.bck-img-home{
+        width: 100%;
+        height: auto;
+    }
+.Row-hero{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+@media (min-width: 1200px) {
+
+    .bck-img-home{
+        width:100%;
+    }
+    
+    .Row-hero{
+        width: 100% ;
+        justify-content: center;
+        display: flex;
+    }
+}
