@@ -36,29 +36,34 @@ export const GetAllUsers = () => {
 
     return (
         <>
-            <div className='profile-container minheight'>
-                <div className='usersDesign'>
-                    {users.length > 0 ?
-                        (<div>
-                            {users.map(persona => {
-                                return (
-                                    <div
-                                        onClick={() => selected(persona)}
-                                        key={persona.id}>
-                                        <div className="text-center">
-                                            <p className="nameDesign">{persona.name}</p>
-                                        </div>
-                                    </div>
-                                )
-                            }
-                            )
-                            }
-                        </div>)
-                        :
-                        (<div>A continuación se muestran los usuarios</div>)
-                    }
+            <div className="d-flex justify-content-center flex-column align-items-center">
+        <h2>Todas los usuarios de Scoobike:</h2>
+        <div>
+          <p>Pincha en el usuario para ver mas detalles:</p>
+        </div>
+
+        <div className="cardsContainer">
+          {users.map((persona) => {
+            return (
+              <div
+                className="userCardDesign"
+                onClick={() => selected(persona)}
+                key={persona.id}
+              >
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p className="pe-4 nameFieldDesign">Usuario:</p>
+                    <p>
+                      {persona.name}
+                    </p>
+                  </div>
                 </div>
-            </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
         </>
     );
 }
+
