@@ -23,7 +23,7 @@ export const AppointmentDetails = () => {
 
     return (
         <>
-            <div className='appointments-list minheight'>
+            <div className='appointments-list'>
                 <div className='texto'>Fecha: </div>
                 {detailRedux?.choosenObject?.date}
                 <div className='texto'>ID del Mecánico: </div>
