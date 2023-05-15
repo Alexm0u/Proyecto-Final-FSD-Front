@@ -61,7 +61,7 @@ function NavBar() {
                 <Nav.Link className='navbarButton' as={Link} to='/register'>Registro</Nav.Link>
               </>
                 )}
-            <Nav.Link className='navbarButton' as={Link} to="/about">Sobre nosotros</Nav.Link>
+            <Nav.Link className='navbarButton' as={Link} to="/about">Taller de reparación</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
