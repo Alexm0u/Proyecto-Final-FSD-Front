@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { getUserData } from '../services/apiCalls';
 import { userData } from '../userSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { Card, ListGroup } from 'react-bootstrap';
+import { Card, Container, ListGroup } from 'react-bootstrap';
 import { detailData } from '../detailSlice';
 
 
@@ -41,8 +41,8 @@ export const Profile = () => {
   console.log(users);
    return (
       <>
-
-       <div className='divCard'>
+      <Container className='prof-container'>
+      <div className='divCard'>
           <Card className='profileCard'>
               <ListGroup variant="flush">
                   <ListGroup.Item>NOMBRE: {users.name}</ListGroup.Item>
@@ -52,6 +52,9 @@ export const Profile = () => {
               </ListGroup>
           </Card>
        </div>
+      </Container>
+
+       
        </>
    )
 }

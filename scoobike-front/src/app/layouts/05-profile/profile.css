@@ -5,12 +5,18 @@
 }
 .profileCard {
     display:flex;
-    margin-top: 4rem ;
-    margin-bottom: 4rem ;
     justify-content: center;
     align-items: center;
 }
 .divCard{
     display: flex;
     justify-content: center;
+}
+@media (min-width: 1200px) {
+
+    .Row-hero{
+        width: 100% ;
+        justify-content: center;
+        display: flex;
+    }
 }
