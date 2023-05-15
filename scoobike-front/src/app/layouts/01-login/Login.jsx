@@ -147,11 +147,11 @@ export function Login() {
                         </Form.Group>
                         <br />
                         <div className='botones'>
-                            <Button variant="primary" className='botonLogin' onClick={() => logeame()}>
+                            <Button variant="primary" className='boton' onClick={() => logeame()}>
                                 Acceder
                             </Button>
                             <div>¿Todavía no eres usuario?</div>
-                            <Button className='boton-cita' variant="primary" href='/register'>Regístrate</Button>
+                            <Button className='boton' variant="primary" href='/register'>Regístrate</Button>
                         
                         </div>
                         
