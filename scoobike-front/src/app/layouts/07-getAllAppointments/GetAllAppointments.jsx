@@ -34,23 +34,33 @@ export const GetAllAppointment = () => {
     console.log(appointments)
     return (
         <>
-            <div className="container-allApp minheight">
-                Todas las citas agendadas :
-                {appointments.length > 0 ? (
-                    <div className="cardsContainer">
-                        {appointments.map(appointment => {
-                            return (
-                                <div  className="app-card" onClick={() => selected(appointment)} key={appointment.id}>
-                                    <div className="text"> NOMBRE CLIENTE: {appointment.User.name}</div>
-                                    <div className="text">FECHA: {appointment.date}</div>
-                                    <div className="text"> MECÁNICO ID: {appointment.mechanic_id}</div>
-                                    
-                                </div>
-                            );
-                        })}
-                    </div>
-                ) : (<div>A continuación se muestran todas las citas</div>)}
-            </div>
+            <div className="d-flex justify-content-center flex-column align-items-center">
+        <h2>Todas las citas agendadas:</h2>
+        <div>
+          <p>Pincha en la cita para ver mas detalles:</p>
+        </div>
+
+        <div className="cardsContainer">
+          {appointments.map((appointment) => {
+            return (
+              <div
+                className="userCardDesign"
+                onClick={() => selected(appointment)}
+                key={appointment.id}
+              >
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p className="pe-4 nameFieldDesign">Cita:</p>
+                    <p>
+                      {appointment.User.name} {appointment.date} {appointment.mechanic_id}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
         </>
     );
 };
