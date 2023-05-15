@@ -6,7 +6,6 @@
 }
 .header-serv {
     display: flex;
-    gap: rem;
     font-weight: bold;
     justify-content: center;
     color: whitesmoke;
