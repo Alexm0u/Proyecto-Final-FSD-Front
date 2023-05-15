@@ -94,7 +94,7 @@ export function Register() {
     return (
         <>
 
-            <div className="container">
+            <div className="container minheight">
                 <h4>Nuevo usuario:</h4>
                     <Row className="registerForm">
                         

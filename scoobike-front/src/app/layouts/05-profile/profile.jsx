@@ -42,7 +42,7 @@ export const Profile = () => {
    return (
       <>
 
-       <div className='divCard'>
+       <div className='divCard minheight'>
           <Card className='profileCard' style={{ width: '20rem' }}>
               <ListGroup variant="flush">
                   <ListGroup.Item>NOMBRE: {users.name}</ListGroup.Item>

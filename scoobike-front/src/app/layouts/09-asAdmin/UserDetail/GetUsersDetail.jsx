@@ -25,7 +25,7 @@ export const UserDetails = () => {
 
     return (
         <>
-        <div className="details-container">
+        <div className="details-container minheight">
 
             <div className='one-user-details'>
                 <div className='texto'>NOMBRE USUARIO: </div>

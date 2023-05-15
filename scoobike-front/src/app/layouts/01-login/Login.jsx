@@ -108,7 +108,7 @@ export function Login() {
 
 
     return (
-    <div className='zonaLogin'><div >
+    <div className='zonaLogin minheight'><div >
                 <Col>
                 <div className='formulario'>
                     <Form>

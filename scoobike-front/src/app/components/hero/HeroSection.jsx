@@ -5,7 +5,7 @@ import './HeroSection.css'
 
 const HeroSection = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid minheight">
         <h4>
           <div>Bienvenido a Scoobike</div>
         </h4>

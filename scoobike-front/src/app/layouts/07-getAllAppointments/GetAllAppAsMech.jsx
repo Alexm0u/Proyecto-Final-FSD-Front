@@ -24,7 +24,7 @@ export const GetMyAppointmentAsMechanic = () => {
     return (
         <>
 
-            <div>Mis citas como mecánico:
+            <div className="container-allapp minheight">Mis citas como mecánico:
                 { appointments.length > 0 ? 
                     (<div className="cardsContainer">
                         {

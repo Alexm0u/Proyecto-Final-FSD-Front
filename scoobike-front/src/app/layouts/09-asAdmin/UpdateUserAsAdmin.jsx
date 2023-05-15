@@ -121,7 +121,7 @@ export const UpdateUserAsAdmin = () => {
     };
 
     return (
-        <div className="divPrincipal">
+        <div className="divPrincipal minheight">
             <div className="loginDesign">
                 <div>
                     <Container>

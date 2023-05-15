@@ -36,7 +36,7 @@ export const GetAllUsers = () => {
 
     return (
         <>
-            <div className='profile-container'>
+            <div className='profile-container minheight'>
                 <div className='usersDesign'>
                     {users.length > 0 ?
                         (<div>

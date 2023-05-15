@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 export const About = () => {
   return (
-    <div className="repairs-container">
+    <div className="repairs-container minheight">
       <div className="card">
         <div className="card-header">
           <h1 className="card-title">Servicios para Patinete</h1>

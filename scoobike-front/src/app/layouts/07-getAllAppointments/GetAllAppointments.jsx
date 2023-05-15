@@ -34,7 +34,7 @@ export const GetAllAppointment = () => {
     console.log(appointments)
     return (
         <>
-            <div>
+            <div className="container-allApp minheight">
                 Todas las citas agendadas :
                 {appointments.length > 0 ? (
                     <div className="cardsContainer">

@@ -70,7 +70,7 @@ export const UpdateAppAsAdmin = () => {
     console.log(detalleData, "Hola")
 
     return (
-        <div className="container">
+        <div className="container minheight">
             <div className="appointment-form" style={{ display: "block", width: 700, padding: 30 }}>
                 <h4>Modificar cita</h4>
                 <Form>

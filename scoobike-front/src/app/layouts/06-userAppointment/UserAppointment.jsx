@@ -34,7 +34,7 @@ export const CatchAppointmentAsUser = () => {
   return (
     <>
 
-      <Container className="appoinment">
+      <Container className="appoinment minheight">
         <Row>
           <Col>
             <div className='usersDesign'>
