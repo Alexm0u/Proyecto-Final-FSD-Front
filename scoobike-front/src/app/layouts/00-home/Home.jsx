@@ -14,10 +14,11 @@ export const Home = () => {
   return (
     <>
       <Container fluid>
-        <h4>
-          Bienvenido a Scoobike
-        </h4>
+        
         <Row className='Row-hero'>
+        <h1 className='text-center'>
+          Bienvenido a Scoobike
+        </h1>
           <Col className='col-main' lg={12} xs={10}>
             <img className='bck-img-home' src={Imgbck}></img>
 
