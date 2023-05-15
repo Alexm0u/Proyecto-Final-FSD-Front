@@ -13,3 +13,23 @@
     margin-bottom:0.5rem ;
     object-fit: fill;
 }
+@media (min-width: 1200px) {
+
+    .repairs-container{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 2rem;
+        display: flex;
+        height: 70vh;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .card{
+        background-color: darkgrey;
+        color: rgb(37, 36, 36);
+        margin-bottom:0.5rem ;
+        object-fit: fill;
+    }
+
+}
