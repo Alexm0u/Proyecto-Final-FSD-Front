@@ -42,8 +42,8 @@ export const Profile = () => {
    return (
       <>
 
-       <div className='divCard minheight'>
-          <Card className='profileCard' style={{ width: '20rem' }}>
+       <div className='divCard'>
+          <Card className='profileCard'>
               <ListGroup variant="flush">
                   <ListGroup.Item>NOMBRE: {users.name}</ListGroup.Item>
                   <ListGroup.Item>EMAIL: {users.email}</ListGroup.Item>
