@@ -41,7 +41,7 @@ export const Profile = () => {
   console.log(users);
    return (
       <>
-      <Container className='prof-container'>
+      <Container className='prof-container minheight'>
       <div className='divCard'>
           <Card className='profileCard'>
               <ListGroup variant="flush">

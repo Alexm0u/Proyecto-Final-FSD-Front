@@ -98,8 +98,8 @@ export function Register() {
                 <h4>Nuevo usuario:</h4>
                     <Row className="registerForm">
                         
-                            <Form>
-                                <Form.Group>
+                            <Form className="general-form">
+                                <Form.Group className="register-form">
                                     <Form.Label>
                                         Nombre:
                                     </Form.Label>
@@ -119,7 +119,7 @@ export function Register() {
                                     />
                                 </Form.Group>
                                 <div>{credencialesError.nameError}</div>
-                                <Form.Group>
+                                <Form.Group className="register-form">
                                     <Form.Label>
                                         Email:
                                     </Form.Label>
@@ -138,7 +138,7 @@ export function Register() {
                                     />
                                 </Form.Group>
                                 <div>{credencialesError.emailError}</div>
-                                <Form.Group>
+                                <Form.Group className="register-form">
                                     <Form.Label>
                                         Teléfono:
                                     </Form.Label>
@@ -158,7 +158,7 @@ export function Register() {
                                     />
                                 </Form.Group>
                                 <div>{credencialesError.nameError}</div>
-                                <Form.Group>
+                                <Form.Group className="register-form">
                                     <Form.Label>
                                         Password:
                                     </Form.Label>

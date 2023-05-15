@@ -67,11 +67,11 @@ export const UpdateAppAsAdmin = () => {
             navigate("/appointment/getall");
         }, 2500);
     };
-    console.log(detalleData, "Hola")
+
 
     return (
         <div className="container minheight">
-            <div className="appointment-form" style={{ display: "block", width: 700, padding: 30 }}>
+            <div className="appointment-form">
                 <h4>Modificar cita</h4>
                 <Form>
                     <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">

@@ -34,7 +34,7 @@ export const GetAllAppointment = () => {
     console.log(appointments)
     return (
         <>
-            <div className="d-flex justify-content-center flex-column align-items-center">
+            <div className="d-flex justify-content-center flex-column align-items-center minheight">
         <h2>Todas las citas agendadas:</h2>
         <div>
           <p>Pincha en la cita para ver mas detalles:</p>
