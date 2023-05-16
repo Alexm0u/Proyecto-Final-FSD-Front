@@ -106,7 +106,7 @@ export const ProfileUpdate = () => {
 
     return (
         <>
-            <div className="divPrincipal">
+            <div className="divPrincipal minheight">
                 <div className="loginDesign">
                     <div>
                             <Container>
