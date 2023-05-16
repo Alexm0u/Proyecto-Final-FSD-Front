@@ -79,7 +79,7 @@ export const UpdateAppointmentAsUser = () => {
         <h4>Modificar cita</h4>
         <Form>
           <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-            <option>Selecciona bici o patinete:</option>
+            <option>Selecciona:</option>
             {/* <option value="1">Extraccion</option>
             <option value="2">Blanqueamiento</option> */}
 

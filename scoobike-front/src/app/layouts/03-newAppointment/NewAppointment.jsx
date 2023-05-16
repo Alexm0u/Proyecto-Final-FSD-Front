@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { decodeToken } from "react-jwt";
 import { useDispatch, useSelector, } from "react-redux";
-import { getUserData, nuevoAppointment } from "../services/apiCalls";
+import { getMechanics, getServices, getUserData, nuevoAppointment } from "../services/apiCalls";
 import { userData } from "../userSlice";
 import { appointmentData } from "../appointmentSlice";
 import "./newAppointment.css";
@@ -17,26 +17,39 @@ export const NewAppointment = () => {
   const ReduxCredentials = useSelector(userData);
   const detallesAppointment = useSelector(appointmentData);
 
-  const [services, setServices] = useState([
-    {
-      id: 1,
-      servicename: "Reparación Bici/Patinete"
-    },
-    {
-      id: 2,
-      servicename: "Revisión completa Bici/Patinete"
+  const [mechanic, setMechanic] = useState([]
+
+  );
+
+  const [service, setService] = useState([]
+
+  );
+
+  useEffect(() => {
+    if (mechanic.length === 0) {
+        getMechanics()
+            .then((result) => {
+                setMechanic(result.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }
-  ]);
-  const [mechanics, setMechanics] = useState([
-    {
-      id: 1,
-      specialtyname: "Bici: Miguel Herranz"
-    },
-    {
-      id: 2,
-      specialtyname: "Patinete: Jose Miguel Camps"
-    }
-  ]);
+}, [mechanic]);
+console.log(service, "Antes de Service")
+useEffect(() => {
+  if (service.length === 0) {
+      getServices()
+          .then((result) => {
+            console.log(result, "Service")
+              setService(result.data);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+  }
+}, [service]);
+console.log(mechanic, "Caracola")
 
   const [appointments, setAppointments] = useState({
     service_id: "",
@@ -130,9 +143,9 @@ const checkError = (e) => {
         <h4>Nueva cita</h4>
         <Form>
           <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-            <option>Selecciona bici o patinete:</option>
+            <option>Servicio:</option>
 
-            {services.map((service) => {
+            {service.map((service) => {
               return (
                 <option key={service.id} value={service.id}>{service.servicename}</option>
               )
@@ -140,11 +153,11 @@ const checkError = (e) => {
           </Form.Select>
           <div>{appointmentsError.service_idError}</div>
           <Form.Select className="dropdown" name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-            <option>Escoge servicio:</option>
+            <option>Tipo:</option>
 
-            {mechanics.map((mechanic) => {
+            {mechanic.map((mechanic) => {
               return (
-                <option key={mechanic.id} value={mechanic.id}>{mechanic.specialtyname}</option>
+                <option key={mechanic.id} value={mechanic.id}>{mechanic.specialty}</option>
               )
             })}
           </Form.Select>

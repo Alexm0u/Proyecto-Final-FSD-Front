@@ -16,8 +16,14 @@ export const getUserData = async (token) => {
     return await axios.get(`${root}/user/myprofile`, config)
 }
 
+export const getMechanics = async () => {
+  console.log("Hola Caracola")
+  return await axios.get(`${root}/appointmentMech`)
+}
 
-
+export const getServices = async () => {
+  return await axios.get(`${root}/appointmentServ`)
+}
 
 export const getTodosUsers = async (token) => {
   let config = {
@@ -25,8 +31,9 @@ export const getTodosUsers = async (token) => {
       'Authorization': 'Bearer '+ token,  
     }
   };
-
+  
   return await axios.get(`${root}/user/all`, config);
+  
 }
 
 export const nuevoAppointment = async (body, token) => {

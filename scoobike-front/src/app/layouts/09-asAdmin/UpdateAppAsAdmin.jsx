@@ -75,7 +75,7 @@ export const UpdateAppAsAdmin = () => {
                 <h4>Modificar cita</h4>
                 <Form>
                     <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-                        <option>Escoge servicio:</option>
+                        <option>Selecciona:</option>
 
 
                         {services.map((service) => {
@@ -85,7 +85,7 @@ export const UpdateAppAsAdmin = () => {
                         })}
                     </Form.Select>
                     <Form.Select className="dropdown" name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-                        <option>Escoge mecánico y especialidad:</option>
+                        <option>Escoge servicio:</option>
 
                         {mechanics.map((mechanic) => {
                             return (

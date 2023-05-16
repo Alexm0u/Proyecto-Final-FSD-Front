@@ -36,7 +36,7 @@ export const GetAllUsers = () => {
 
     return (
         <>
-            <div className="d-flex justify-content-center flex-column align-items-center">
+            <div className="d-flex justify-content-center flex-column align-items-center minheight">
         <h2>Todas los usuarios de Scoobike:</h2>
         <div>
           <p>Pincha en el usuario para ver mas detalles:</p>
