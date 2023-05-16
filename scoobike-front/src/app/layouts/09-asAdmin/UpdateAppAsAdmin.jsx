@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
-import {  useNavigate } from 'react-router-dom';
-import { appUpdateAsAdmin } from '../services/apiCalls';
+import { useNavigate } from 'react-router-dom';
+import { appUpdateAsAdmin, getMechanics, getServices } from '../services/apiCalls';
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import { InputText } from '../../components/InputText/InputText';
 import { validate } from '../../helpers/useful';
@@ -16,33 +16,44 @@ export const UpdateAppAsAdmin = () => {
     const params = detalleData?.choosenObject?.id;
     const credentialsRdx = useSelector(userData);
     const navigate = useNavigate();
-    
 
-    const [services, setServices] = useState([
-        {
-            id: 1,
-            servicename: "Reparación Bici/Patinete"
-        },
-        {
-            id: 2,
-            servicename: "Revisión completa Bici/Patinete"
+    const [mechanic, setMechanic] = useState([]
+
+        );
+      
+        const [service, setService] = useState([]
+      
+        );
+    useEffect(() => {
+        if (mechanic.length === 0) {
+            getMechanics()
+                .then((result) => {
+                    setMechanic(result.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
-    ]);
-    const [mechanics, setMechanics] = useState([
-        {
-            id: 1,
-            specialtyname: "Bici: Miguel Herranz"
-        },
-        {
-            id: 2,
-            specialtyname: "Patinete: Jose Miguel Camps"
+    }, [mechanic]);
+
+    useEffect(() => {
+        if (service.length === 0) {
+            getServices()
+                .then((result) => {
+
+                    setService(result.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
-    ]);
+    }, [service]);
+
     const [appointments, setAppointments] = useState({
 
         service_id: "",
         mechanic_id: "",
-       
+
         date: "",
     });
 
@@ -57,7 +68,7 @@ export const UpdateAppAsAdmin = () => {
     const [welcome, setWelcome] = useState("");
 
     const checkError = (e) => {
-        
+
     };
 
     const updateUserAppointment = () => {
@@ -70,26 +81,26 @@ export const UpdateAppAsAdmin = () => {
 
 
     return (
-        <div className="container minheight">
-            <div className="appointment-form">
+
+        <Container className="minheight">
+            <Row><Col>
                 <h4>Modificar cita</h4>
                 <Form>
-                    <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-                        <option>Selecciona:</option>
+                    <Form.Select  name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
+                        <option>Servicio:</option>
 
-
-                        {services.map((service) => {
+                        {service.map((service) => {
                             return (
                                 <option key={service.id} value={service.id}>{service.servicename}</option>
                             )
                         })}
                     </Form.Select>
-                    <Form.Select className="dropdown" name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-                        <option>Escoge servicio:</option>
+                    <Form.Select  name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
+                        <option>Tipo:</option>
 
-                        {mechanics.map((mechanic) => {
+                        {mechanic.map((mechanic) => {
                             return (
-                                <option key={mechanic.id} value={mechanic.id}>{mechanic.specialtyname}</option>
+                                <option key={mechanic.id} value={mechanic.id}>{mechanic.specialty}</option>
                             )
                         })}
                     </Form.Select>
@@ -112,8 +123,11 @@ export const UpdateAppAsAdmin = () => {
                         </Button>
                     </div>
                 </Form>
-            </div>
-        </div>
+            </Col></Row>
+            
+            
+            
+        </Container>
 
 
     );

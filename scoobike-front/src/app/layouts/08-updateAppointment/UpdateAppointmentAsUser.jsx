@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { decodeToken } from "react-jwt";
 import { useDispatch, useSelector, } from "react-redux";
-import { updateAppointment } from "../services/apiCalls";
+import { getMechanics, getServices, updateAppointment } from "../services/apiCalls";
 import { userData } from "../userSlice";
 import { appointmentData } from "../appointmentSlice";
 // import "./newAppointment.css";
@@ -17,26 +17,37 @@ export const UpdateAppointmentAsUser = () => {
   const detallesAppointment = useSelector(appointmentData);
   const params = detallesAppointment.choosenAppointment.id
 
-  const [services, setServices] = useState([
-    {
-      id: 1,
-      servicename: "Reparación Bici/Patinete"
-    },
-    {
-      id: 2,
-      servicename: "Revisión completa Bici/Patinete"
+  const [mechanic, setMechanic] = useState([]
+
+    );
+  
+    const [service, setService] = useState([]
+  
+    );
+  useEffect(() => {
+    if (mechanic.length === 0) {
+        getMechanics()
+            .then((result) => {
+                setMechanic(result.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }
-  ]);
-  const [mechanics, setMechanics] = useState([
-    {
-      id: 1,
-      specialtyname: "Bici: Miguel Herranz"
-    },
-    {
-      id: 2,
-      specialtyname: "Patinete: Jose Miguel Camps"
-    }
-  ]);
+}, [mechanic]);
+
+useEffect(() => {
+  if (service.length === 0) {
+      getServices()
+          .then((result) => {
+
+              setService(result.data);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+  }
+}, [service]);
 
   const [appointments, setAppointments] = useState({
     id: params,
@@ -75,26 +86,24 @@ export const UpdateAppointmentAsUser = () => {
   return (
 
     <div className="container minheight">
-    <div className="appointment-form" style={{ display: "block", width: 700, padding: 30 }}>
+    <div className="appointment-form" >
         <h4>Modificar cita</h4>
         <Form>
-          <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-            <option>Selecciona:</option>
-            {/* <option value="1">Extraccion</option>
-            <option value="2">Blanqueamiento</option> */}
+        <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
+            <option>Servicio:</option>
 
-            {services.map((service) => {
+            {service.map((service) => {
               return (
                 <option key={service.id} value={service.id}>{service.servicename}</option>
               )
             })}
           </Form.Select>
           <Form.Select className="dropdown" name={"mechanic_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-            <option>Escoge servicio:</option>
+            <option>Tipo:</option>
 
-            {mechanics.map((mechanic) => {
+            {mechanic.map((mechanic) => {
               return (
-                <option key={mechanic.id} value={mechanic.id}>{mechanic.specialtyname}</option>
+                <option key={mechanic.id} value={mechanic.id}>{mechanic.specialty}</option>
               )
             })}
           </Form.Select>

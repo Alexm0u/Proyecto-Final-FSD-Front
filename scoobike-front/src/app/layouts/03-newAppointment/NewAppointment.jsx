@@ -25,7 +25,7 @@ export const NewAppointment = () => {
 
   );
 
-  useEffect(() => {
+useEffect(() => {
     if (mechanic.length === 0) {
         getMechanics()
             .then((result) => {
@@ -36,12 +36,12 @@ export const NewAppointment = () => {
             });
     }
 }, [mechanic]);
-console.log(service, "Antes de Service")
+
 useEffect(() => {
   if (service.length === 0) {
       getServices()
           .then((result) => {
-            console.log(result, "Service")
+
               setService(result.data);
           })
           .catch((error) => {
@@ -49,7 +49,7 @@ useEffect(() => {
           });
   }
 }, [service]);
-console.log(mechanic, "Caracola")
+
 
   const [appointments, setAppointments] = useState({
     service_id: "",
@@ -139,7 +139,7 @@ const checkError = (e) => {
   return (
 
     <div className="container minheight">
-    <div className="appointment-form" style={{ display: "block", width: 700, padding: 30 }}>
+    <div className="appointment-form" >
         <h4>Nueva cita</h4>
         <Form>
           <Form.Select className="dropdown" name={"service_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
