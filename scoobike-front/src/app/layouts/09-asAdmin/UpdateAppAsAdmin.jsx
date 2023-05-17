@@ -118,7 +118,7 @@ export const UpdateAppAsAdmin = () => {
                     </Form.Group>
                     <br />
                     <div className="botonModificar">
-                        <Button variant="primary" onClick={updateUserAppointment}>
+                    <Button variant="primary" onClick={updateUserAppointment}>
                             Modificar cita
                         </Button>
                     </div>

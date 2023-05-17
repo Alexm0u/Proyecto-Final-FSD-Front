@@ -30,10 +30,12 @@ export const AppointmentDetails = () => {
                 {detailRedux?.choosenObject?.mechanic_id}
                 <div className='texto'>Nombre cliente: </div>
                 {detailRedux?.choosenObject?.User.name}
-            </div>
-            <Button className='boton' variant="primary" onClick={updateUser}>
+                <div><Button className='boton' variant="primary" onClick={updateUser}>
                 Modificar cita usuario
-            </Button>
+            </Button></div>
+                
+            </div>
+            
             
 
         </>
