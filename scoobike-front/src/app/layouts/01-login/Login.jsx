@@ -108,12 +108,12 @@ export function Login() {
 
 
     return (
-    <div className='zonaLogin minheight'><div >
-                <Col>
+        <div className='zonaLogin minheight'><div >
+            <Col>
                 <div className='formulario'>
                     <Form>
                         <Form.Group className='mailLogin-form'>
-                            <Form.Label>Email:</Form.Label>
+                            <Form.Label className='Label-form'>Email:</Form.Label>
                             <InputText
                                 className={
                                     credencialesError.emailError === ""
@@ -129,7 +129,7 @@ export function Login() {
                             />
                         </Form.Group>
                         <Form.Group className='passwordLogin-form'>
-                            <Form.Label>Password:</Form.Label>
+                            <Form.Label className='Label-form'>Password:</Form.Label>
                             <InputText
                                 className={
                                     credencialesError.passwordError ===
@@ -152,14 +152,62 @@ export function Login() {
                             </Button>
                             <div>¿Todavía no eres usuario?</div>
                             <Button className='boton' variant="primary" href='/register'>Regístrate</Button>
-                        
+
                         </div>
-                        
+
                     </Form>
                 </div>
-                </Col>
-            </div>
-            </div>
+            </Col>
+        </div>
+            {/* <div className="form-box">
+                <div className="form-value">
+                    <div className="action">
+                        <h2 className='title-box'>Login</h2>
+                        <div className="input-box">
+                            <Form.Label className='inputbox-label'>Email:</Form.Label>
+                            <InputText
+                                className={
+                                    credencialesError.emailError === ""
+                                        ? "inputBasicDesign"
+                                        : "inputBasicDesign inputErrorDesign"
+                                }
+                                type={"email"}
+                                name={"email"}
+                                placeholder={"Email..."}
+                                required={true}
+                                changeFunction={(e) => inputHandler(e)}
+                                blurFunction={(e) => checkError(e)}
+                            /></div>
+                        <div className="input-box">
+                            <Form.Label className='inputbox-label'>Password:</Form.Label>
+                            <InputText
+                                className={
+                                    credencialesError.passwordError ===
+                                        ""
+                                        ? "inputBasicDesign"
+                                        : "inputBasicDesign inputErrorDesign"
+                                }
+                                type={"password"}
+                                name={"password"}
+                                placeholder={"Password..."}
+                                required={true}
+                                changeFunction={(e) => inputHandler(e)}
+                                blurFunction={(e) => checkError(e)}
+                            />
+                        </div>
+                        <div className="botones">
+                            <Button variant="primary" className='boton' onClick={() => logeame()}>
+                                Acceder
+                            </Button>
+                            <div>¿Todavía no eres usuario?</div>
+                            <Button className='boton' variant="primary" href='/register'>Regístrate</Button>
+                        </div>
+                    </div>
+                </div>
+
+            </div> */}
+        </div>
+
 
     );
 }
