@@ -53,7 +53,6 @@ export const GetAllAppointment = () => {
                     <p className="pe-4 nameFieldDesign">Cita:</p>
                     <p>Nombre:{appointment.User.name}</p>
                     <p>Fecha:{appointment.date}</p>
-                    <p>Id del mecánico:{appointment.mechanic_id}</p>
                   </div>
                 </div>
               </div>
