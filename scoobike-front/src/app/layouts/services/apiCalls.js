@@ -35,6 +35,12 @@ export const getTodosUsers = async (token) => {
   return await axios.get(`${root}/user/all`, config);
   
 }
+export const getTodosRoles = async (token) => {
+  let config = {        headers: { Authorization: `Bearer ${token}` }    };
+  console.log(token)
+  return await axios.get(`${root}/user/all/roles`, config);
+  
+}
 
 export const nuevoAppointment = async (body, token) => {
     let config = {        headers: { Authorization: `Bearer `+token }    };

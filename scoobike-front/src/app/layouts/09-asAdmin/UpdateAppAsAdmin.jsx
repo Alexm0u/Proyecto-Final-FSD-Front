@@ -70,7 +70,7 @@ export const UpdateAppAsAdmin = () => {
     const checkError = (e) => {
 
     };
-
+console.log(appointments)
     const updateUserAppointment = () => {
         appUpdateAsAdmin(params, appointments, credentialsRdx?.credentials?.token);
         setWelcome(`Datos actualizados correctamente`);

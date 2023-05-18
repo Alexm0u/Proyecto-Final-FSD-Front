@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { detailData } from '../detailSlice';
 import { userData } from '../userSlice';
 import { useNavigate } from 'react-router-dom';
-import { userUpdateAsAdmin } from '../services/apiCalls';
+import { getTodosRoles, userUpdateAsAdmin } from '../services/apiCalls';
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import { InputText } from '../../components/InputText/InputText';
 import { validate } from '../../helpers/useful';
@@ -19,20 +19,19 @@ export const UpdateUserAsAdmin = () => {
     const navigate = useNavigate();
 
     const [roles, setRoles] = useState([
-        {
-            role_id: 1,
-            servicename: "Usuario"
-        },
-        {
-            role_id: 2,
-            servicename: "Mecánico"
-        },
-        {
-            role_id: 3,
-            servicename: "Admin"
-        }
+        
     ]);
-
+    useEffect(() => {
+        if (roles.length === 0) {
+            getTodosRoles(detailRedux.credentials?.token)
+                .then((result) => { 
+                    setRoles(result.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+    }, [roles]);
     const [user, setUser] = useState({
 
         id: params,
@@ -48,7 +47,7 @@ export const UpdateUserAsAdmin = () => {
             [e.target.name]: e.target.value,
         }));
     };
-
+console.log(roles)
     const [valiuser, setValiuser] = useState({
 
         nameVali: false,
@@ -167,15 +166,15 @@ export const UpdateUserAsAdmin = () => {
                                     </Form.Group>
                                     <div>{userError.phoneError}</div>
                                     <br />
-                                    <Form.Select className="dropdown" name={"role_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
-                                        <option>Escoge nuevo rol:</option>
+                                    <Form.Select  name={"role_id"} onChange={(e) => inputHandler(e)} aria-label="Default select example">
+                        <option>Role:</option>
 
-                                        {roles.map((rol) => {
-                                            return (
-                                                <option key={rol.role_id} value={rol.role_id}>{rol.servicename}</option>
-                                            )
-                                        })}
-                                    </Form.Select>
+                        {roles.map((role) => {
+                            return (
+                                <option key={role.id} value={role.id}>{role.name}</option>
+                            )
+                        })}
+                    </Form.Select>
                                     <Button
                                         className="botonLog"
                                         variant="primary"
