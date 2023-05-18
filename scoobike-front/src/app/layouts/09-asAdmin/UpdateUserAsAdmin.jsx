@@ -22,7 +22,7 @@ export const UpdateUserAsAdmin = () => {
     ]);
     useEffect(() => {
         if (roles.length === 0) {
-            getTodosRoles(detailRedux.credentials?.token)
+            getTodosRoles(credentialsRdx.credentials?.token)
                 .then((result) => { 
                     setRoles(result.data);
                 })
