@@ -94,91 +94,181 @@ export function Register() {
     return (
         <>
 
-            <div className="container minheight">
-                <h4>Nuevo usuario:</h4>
-                    <Row className="registerForm">
-                        
-                            <Form className="general-form">
-                                <Form.Group className="register-form">
-                                    <Form.Label>
-                                        Nombre:
-                                    </Form.Label>
-                                    <InputText
-                                        className={
-                                            credencialesError.nameError ===
+            <Container className="container minheight">
+
+                {/* <Row className="registerForm">
+
+                    <Form className="general-form">
+                        <Form.Group className="register-form">
+                            <Form.Label>
+                                Nombre:
+                            </Form.Label>
+                            <InputText
+                                className={
+                                    credencialesError.nameError ===
+                                        ""
+                                        ? "inputBasicDesign"
+                                        : "inputBasicDesign inputErrorDesign"
+                                }
+                                type={"text"}
+                                name={"name"}
+                                placeholder={"Nombre completo..."}
+                                required={true}
+                                changeFunction={(e) => inputHandler(e)}
+                                blurFunction={(e) => checkError(e)}
+                            />
+                        </Form.Group>
+                        <div>{credencialesError.nameError}</div>
+                        <Form.Group className="register-form">
+                            <Form.Label>
+                                Email:
+                            </Form.Label>
+                            <InputText
+                                className={
+                                    credencialesError.emailError === ""
+                                        ? "inputBasicDesign"
+                                        : "inputBasicDesign inputErrorDesign"
+                                }
+                                type={"email"}
+                                name={"email"}
+                                placeholder={"Email..."}
+                                required={true}
+                                changeFunction={(e) => inputHandler(e)}
+                                blurFunction={(e) => checkError(e)}
+                            />
+                        </Form.Group>
+                        <div>{credencialesError.emailError}</div>
+                        <Form.Group className="register-form">
+                            <Form.Label>
+                                Teléfono:
+                            </Form.Label>
+                            <InputText
+                                className={
+                                    credencialesError.nameError ===
+                                        ""
+                                        ? "inputBasicDesign"
+                                        : "inputBasicDesign inputErrorDesign"
+                                }
+                                type={"text"}
+                                name={"phone"}
+                                placeholder={"Teléfono..."}
+                                required={true}
+                                changeFunction={(e) => inputHandler(e)}
+                                blurFunction={(e) => checkError(e)}
+                            />
+                        </Form.Group>
+                        <div>{credencialesError.nameError}</div>
+                        <Form.Group className="register-form">
+                            <Form.Label>
+                                Password:
+                            </Form.Label>
+                            <InputText
+                                className={
+                                    credencialesError.passwordError ===
+                                        ""
+                                        ? "inputBasicDesign"
+                                        : "inputBasicDesign inputErrorDesign"
+                                }
+                                type={"password"}
+                                name={"password"}
+                                placeholder={"Password..."}
+                                required={true}
+                                changeFunction={(e) => inputHandler(e)}
+                                blurFunction={(e) => checkError(e)}
+                            />
+                        </Form.Group>
+                        <div>{credencialesError.passwordError}</div>
+                        <br />
+                        <Button
+                            className={
+                                registerAct
+                                    ? "registerSendDeac registerSendAct"
+                                    : "registerSendDeac"
+                            }
+                            variant="primary"
+                            onClick={registerUser}
+                        >
+                            Crear usuario
+                        </Button>
+                    </Form>
+
+                </Row> */}
+                <Col>
+                    <div className='formulario'>
+                        <Form className="login-Form">
+                            <Form.Group className='nameReg-form'>
+                                <Form.Label className='Label-form'>Nombre:</Form.Label>
+                                <InputText
+                                    className={
+                                        credencialesError.nameError ===
                                             ""
-                                                ? "inputBasicDesign"
-                                                : "inputBasicDesign inputErrorDesign"
-                                        }
-                                        type={"text"}
-                                        name={"name"}
-                                        placeholder={"Nombre completo..."}
-                                        required={true}
-                                        changeFunction={(e) => inputHandler(e)}
-                                        blurFunction={(e) => checkError(e)}
-                                    />
-                                </Form.Group>
-                                <div>{credencialesError.nameError}</div>
-                                <Form.Group className="register-form">
-                                    <Form.Label>
-                                        Email:
-                                    </Form.Label>
-                                    <InputText
-                                        className={
-                                            credencialesError.emailError === ""
-                                                ? "inputBasicDesign"
-                                                : "inputBasicDesign inputErrorDesign"
-                                        }
-                                        type={"email"}
-                                        name={"email"}
-                                        placeholder={"Email..."}
-                                        required={true}
-                                        changeFunction={(e) => inputHandler(e)}
-                                        blurFunction={(e) => checkError(e)}
-                                    />
-                                </Form.Group>
-                                <div>{credencialesError.emailError}</div>
-                                <Form.Group className="register-form">
-                                    <Form.Label>
-                                        Teléfono:
-                                    </Form.Label>
-                                    <InputText
-                                        className={
-                                            credencialesError.nameError ===
+                                            ? "inputBasicDesign"
+                                            : "inputBasicDesign inputErrorDesign"
+                                    }
+                                    type={"text"}
+                                    name={"name"}
+                                    placeholder={"Nombre completo..."}
+                                    required={true}
+                                    changeFunction={(e) => inputHandler(e)}
+                                    blurFunction={(e) => checkError(e)}
+                                />
+                            </Form.Group>
+                            <div>{credencialesError.nameError}</div>
+                            <Form.Group className='mailReg-form'>
+                                <Form.Label className='Label-form'>Email:</Form.Label>
+                                <InputText
+                                    className={
+                                        credencialesError.emailError === ""
+                                            ? "inputBasicDesign"
+                                            : "inputBasicDesign inputErrorDesign"
+                                    }
+                                    type={"email"}
+                                    name={"email"}
+                                    placeholder={"Email..."}
+                                    required={true}
+                                    changeFunction={(e) => inputHandler(e)}
+                                    blurFunction={(e) => checkError(e)}
+                                />
+                            </Form.Group>
+                            <div>{credencialesError.emailError}</div>
+                            <Form.Group className='phoneReg-form'>
+                                <Form.Label className='Label-form'>Teléfono:</Form.Label>
+                                <InputText
+                                    className={
+                                        credencialesError.nameError ===
                                             ""
-                                                ? "inputBasicDesign"
-                                                : "inputBasicDesign inputErrorDesign"
-                                        }
-                                        type={"text"}
-                                        name={"phone"}
-                                        placeholder={"Teléfono..."}
-                                        required={true}
-                                        changeFunction={(e) => inputHandler(e)}
-                                        blurFunction={(e) => checkError(e)}
-                                    />
-                                </Form.Group>
-                                <div>{credencialesError.nameError}</div>
-                                <Form.Group className="register-form">
-                                    <Form.Label>
-                                        Password:
-                                    </Form.Label>
-                                    <InputText
-                                        className={
-                                            credencialesError.passwordError ===
+                                            ? "inputBasicDesign"
+                                            : "inputBasicDesign inputErrorDesign"
+                                    }
+                                    type={"text"}
+                                    name={"phone"}
+                                    placeholder={"Teléfono..."}
+                                    required={true}
+                                    changeFunction={(e) => inputHandler(e)}
+                                    blurFunction={(e) => checkError(e)}
+                                />
+                            </Form.Group>
+                            <div>{credencialesError.nameError}</div>
+                            <Form.Group className='passwordReg-form'>
+                                <Form.Label className='Label-form'>Password:</Form.Label>
+                                <InputText
+                                    className={
+                                        credencialesError.passwordError ===
                                             ""
-                                                ? "inputBasicDesign"
-                                                : "inputBasicDesign inputErrorDesign"
-                                        }
-                                        type={"password"}
-                                        name={"password"}
-                                        placeholder={"Password..."}
-                                        required={true}
-                                        changeFunction={(e) => inputHandler(e)}
-                                        blurFunction={(e) => checkError(e)}
-                                    />
-                                </Form.Group>
-                                <div>{credencialesError.passwordError}</div>
-                                <br />
+                                            ? "inputBasicDesign"
+                                            : "inputBasicDesign inputErrorDesign"
+                                    }
+                                    type={"password"}
+                                    name={"password"}
+                                    placeholder={"Password..."}
+                                    required={true}
+                                    changeFunction={(e) => inputHandler(e)}
+                                    blurFunction={(e) => checkError(e)}
+                                />
+                            </Form.Group>
+                            <div>{credencialesError.passwordError}</div>
+                            <br />
+                            <div className='botones'>
                                 <Button
                                     className={
                                         registerAct
@@ -190,12 +280,16 @@ export function Register() {
                                 >
                                     Crear usuario
                                 </Button>
-                            </Form>
-                        
-                    </Row>
-                
-            </div>
-            </>
+
+
+                            </div>
+
+                        </Form>
+                    </div>
+                </Col>
+
+            </Container>
+        </>
     );
 }
 

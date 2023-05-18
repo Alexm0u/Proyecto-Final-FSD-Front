@@ -159,53 +159,6 @@ export function Login() {
                 </div>
             </Col>
         </div>
-            {/* <div className="form-box">
-                <div className="form-value">
-                    <div className="action">
-                        <h2 className='title-box'>Login</h2>
-                        <div className="input-box">
-                            <Form.Label className='inputbox-label'>Email:</Form.Label>
-                            <InputText
-                                className={
-                                    credencialesError.emailError === ""
-                                        ? "inputBasicDesign"
-                                        : "inputBasicDesign inputErrorDesign"
-                                }
-                                type={"email"}
-                                name={"email"}
-                                placeholder={"Email..."}
-                                required={true}
-                                changeFunction={(e) => inputHandler(e)}
-                                blurFunction={(e) => checkError(e)}
-                            /></div>
-                        <div className="input-box">
-                            <Form.Label className='inputbox-label'>Password:</Form.Label>
-                            <InputText
-                                className={
-                                    credencialesError.passwordError ===
-                                        ""
-                                        ? "inputBasicDesign"
-                                        : "inputBasicDesign inputErrorDesign"
-                                }
-                                type={"password"}
-                                name={"password"}
-                                placeholder={"Password..."}
-                                required={true}
-                                changeFunction={(e) => inputHandler(e)}
-                                blurFunction={(e) => checkError(e)}
-                            />
-                        </div>
-                        <div className="botones">
-                            <Button variant="primary" className='boton' onClick={() => logeame()}>
-                                Acceder
-                            </Button>
-                            <div>¿Todavía no eres usuario?</div>
-                            <Button className='boton' variant="primary" href='/register'>Regístrate</Button>
-                        </div>
-                    </div>
-                </div>
-
-            </div> */}
         </div>
 
 

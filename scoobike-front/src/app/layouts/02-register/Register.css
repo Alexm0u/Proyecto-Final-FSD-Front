@@ -1,6 +1,85 @@
+.container{
+    display:flex;
+    justify-content: center;
+    
+
+}
+.title-form{
+    justify-content: center;
+    align-items: center;
+}
 
 
-.registerForm {
+.formulario {
+    background: transparent 100;
+    padding: 3em;
+    height: 30em;
+    border-radius: 0.5em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    box-shadow:  0px 0px 10px 2px rgba(0,0,0,0.13);
+    place-items: center;
+    background: url('../../../img/img-login-back.jpg');
+
+}
+.botones{
+    place-items: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.zonaLogin{
+    display:flex;
+        justify-content: center;
+        align-items:center;
+
+        min-height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.nameReg-form{
+    margin-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mailReg-form{
+    margin-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.phoneReg-form{
+    margin-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.passwordReg-form{
+    margin-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Label-form{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+}
+
+
+/* .registerForm {
     height: 15em;
     background-color: darkgrey;
     border-radius: 0.5em;
@@ -12,20 +91,20 @@
     place-items: center;
     margin-bottom: 2rem;
     
-}
+} */
 
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items:center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+} */
 
 
 @media (min-width: 1200px) {
 
-    .registerForm {
+    /* .registerForm {
         padding: 3rem;
         height: 15rem;
         background-color: darkgrey;
@@ -37,9 +116,9 @@
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.13);
         place-items: center;
         margin-bottom: 2rem;
-    }
+    } */
 
-    .container {
+    /* .container {
         display: flex;
     justify-content: center;
     flex-direction: column;
@@ -47,5 +126,72 @@
 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
+    } */
+    .formulario {
+        background: transparent 100;
+        padding: 3em;
+        height: 30em;
+        width: 100%;
+        border-radius: 0.5em;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow:  0px 0px 10px 2px rgba(0,0,0,0.13);
+        place-items: center;
     }
+    .botones{
+        place-items: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    
+    .login-Form{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        color: aliceblue;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+    .nameReg-form{
+        margin-top: 0.5rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mailReg-form{
+        margin-top: 0.5rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .phoneReg-form{
+        margin-top: 0.5rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .passwordReg-form{
+        margin-top: 0.5rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Label-form{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2em;
+    }
+    
 }
