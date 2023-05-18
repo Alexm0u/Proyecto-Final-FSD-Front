@@ -12,7 +12,6 @@ export const AppointmentDetails = () => {
     const credentialsRdx = useSelector(userData);
     let email = credentialsRdx?.credentials?.email;
     const navigate = useNavigate();
-    //conexion a RDX en modo lectura
     const detailRedux = useSelector(detailData);
 
     const updateUser = () => {

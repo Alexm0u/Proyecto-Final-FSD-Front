@@ -27,7 +27,7 @@ export const Profile = () => {
       if (users.name === "") {
           getUserData(ReduxCredentials.credentials.token)
           .then((result) => {
-          console.log(result.data.data);
+          ;
           setUsers({
               name: result.data.data.name,
               email: result.data.data.email,
@@ -38,7 +38,7 @@ export const Profile = () => {
           .catch((error) => console.log(error));
       }
   }, [users]);
-  console.log(users);
+  
    return (
       <>
       <Container className='prof-container minheight'>

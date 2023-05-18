@@ -31,7 +31,6 @@ export const GetAllAppointment = () => {
             navigate("/appointment/all/details");
         }, 500);
     }
-    console.log(appointments)
     return (
         <>
             <div className="d-flex justify-content-center flex-column align-items-center minheight">

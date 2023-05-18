@@ -10,7 +10,6 @@ import { validate } from '../../helpers/useful';
 import './UpdateUserAsAdmin.css'
 
 export const UpdateUserAsAdmin = () => {
-    //conexion a RDX en modo lectura
     const detailRedux = useSelector(detailData);
     const params = detailRedux?.choosenObject?.id;
     const email = detailRedux?.choosenObject?.email;

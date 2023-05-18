@@ -11,7 +11,6 @@ import { detailData } from '../detailSlice';
 
 
 export const UpdateAppAsAdmin = () => {
-    //conexion a RDX en modo lectura
     const detalleData = useSelector(detailData)
     const params = detalleData?.choosenObject?.id;
     const credentialsRdx = useSelector(userData);

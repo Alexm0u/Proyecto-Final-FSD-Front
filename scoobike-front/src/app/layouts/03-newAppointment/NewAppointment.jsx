@@ -100,7 +100,7 @@ useEffect(() => {
     }
     setRegisterAct(true);
 });
-console.log (valiAppointments, appointments)
+
 const checkError = (e) => {
     let error = "";
     const checked = validate(

@@ -30,7 +30,6 @@ export const CatchAppointmentAsUser = () => {
         });
     }
   }, [appointments]);
-  console.log(appointments)
   return (
     <>
 

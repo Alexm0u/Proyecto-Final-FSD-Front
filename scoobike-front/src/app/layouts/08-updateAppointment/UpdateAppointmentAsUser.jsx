@@ -72,7 +72,7 @@ useEffect(() => {
     updateAppointment(params, appointments, ReduxCredentials.credentials.token)
       .then((resultado) => {
         setAppointments(resultado.data);
-        console.log(resultado);
+        
 
         setTimeout(() => {
           navigate("/appointment/myappointment/user/profile");
