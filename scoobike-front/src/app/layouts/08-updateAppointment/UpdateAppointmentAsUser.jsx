@@ -75,7 +75,7 @@ useEffect(() => {
         console.log(resultado);
 
         setTimeout(() => {
-          navigate("/user/profile");
+          navigate("/appointment/myappointment/user/profile");
         }, 1000);
       })
       .catch((error) => {
